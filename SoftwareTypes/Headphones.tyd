@@ -1,0 +1,140 @@
+SoftwareType
+	{
+	Name			"Headphones"
+	Category		Electronics
+	Description		"They're not even phones!"
+	Random			0.2
+	OneClient		False
+	InHouse			False
+	SubmarketNames	[ Functionality; Sound Quality; Comfort ]
+	OptimalDevTime 	24
+	Categories
+		[
+			{
+			Name "Default"
+			Popularity 1
+			IdealPrice 100
+			Submarkets [4; 8; 3]
+			Retention 36
+			TimeScale 1
+			Iterative 0.1
+			NameGenerator Headphones
+			}
+			{
+			Name "Earphones"
+			Description "Ok Noogle"
+			Popularity 1
+			IdealPrice 200
+			Submarkets [4; 5; 6]
+			Retention 48
+			TimeScale 1
+			Iterative 0.1
+			Unlock 2010
+			NameGenerator Headphones
+			}
+		]
+	Features
+		[
+			{
+			Name "System"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 3; 1; 2 ]
+			Features
+				[
+					{
+					Name	"Volume Control"
+					Description "Control the volume"
+					DevTime 2
+					CodeArt 0.75
+					Level 1
+					Submarkets [2; 1; 1 ]
+					}
+					{
+					Name	"AUX Capable"
+					Description "Plug your phone straight into the speaker"
+					DevTime 2
+					CodeArt 0.75
+					Level 1
+					Submarkets [3; 2; -1 ]
+					}
+					{
+					Name	"Play pause buttons"
+					Description "Play and pause your music"
+					DevTime 3
+					CodeArt 0.75
+					Level 2
+					Submarkets [3; 2; 1 ]
+					Unlock 2000
+					}
+					{
+					Name	"Built-in microphone"
+					Description "Play and pause your music"
+					DevTime 3
+					CodeArt 0.75
+					Level 2
+					Submarkets [3; 2; 1 ]
+					Unlock 2000
+					}
+					{
+					Name	"Skip button"
+					Description "NEXT!"
+					DevTime 3
+					CodeArt 0.75
+					Level 2
+					Submarkets [3; 2; 1 ]
+					Unlock 2000
+					}
+					{
+					Name	"Better build quality"
+					Description "Play and pause your music"
+					DevTime 5
+					CodeArt 0.75
+					Level 3
+					Submarkets [3; 3; 10 ]
+					Unlock 1990
+					}
+					{
+					Name	"Noise isolation"
+					Description "I can't hear you!"
+					DevTime 5
+					CodeArt 0.75
+					Level 3
+					Submarkets [3; 4; 3 ]
+					Unlock 1995
+					}
+				]
+			}
+			{
+			Name "Wireless"
+			Spec Network
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 3; 1; 2 ]
+			Optional True
+			Unlock 1995
+			Features
+				[
+					{
+					Name	"Extra Range"
+					Description "Free range speakers!"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Submarkets [3; 5; 1 ]
+					Unlock 2000
+					}
+					{
+					Name	"Bigger battery"
+					Description "Speak all day long"
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Submarkets [3; 5; 1 ]
+					Unlock 2000
+					}
+				]
+			}
+		]
+	}

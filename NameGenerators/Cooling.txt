@@ -1,0 +1,43 @@
+-start(base,base2)
+-base(base2,base3,basend)
+Corpair
+HZYT
+Frac Designs
+BeLoud
+Infel
+AMZ
+Noctuan
+-basend(stop)
+ Krazen
+ H
+ X 
+ NH
+ U
+ IOW
+ AIO
+-base2(base3)
+ Krazen
+ H
+ X 
+ NH
+ U
+ IOW
+ AIO
+-base3(end,stop)
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+-end(stop)
+i
+5
+W
+1
+6
+8

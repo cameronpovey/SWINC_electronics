@@ -1,0 +1,87 @@
+SoftwareType
+	{
+	Name			"Computer"
+	Category		Electronics
+	Description		"For all your computing needs"
+	Random			0.2
+	OneClient		False
+	InHouse			False
+	SubmarketNames	[ Functionality; Speed; Design ]
+	OptimalDevTime 	24
+	Categories
+		[
+			{
+			Name "Default"
+			Popularity 0.05
+			IdealPrice 800
+			Submarkets [5; 5; 5]
+			Retention 36
+			TimeScale 1
+			Iterative 0.2
+			NameGenerator Computers
+			}
+		]
+	Features
+		[
+			{
+			Name "System"
+			Spec System
+			Dependencies	["CPU"; "Motherboard"; "RAM"; "PSU"; "CPU Cooling"; "Storage"; "Case"]
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 3; 1; 2 ]
+			Features
+				[
+					{
+					Name	"Mini"
+					Description "Small computer. Need Dongle."
+					Dependencies "Dongle"
+					DevTime 2
+					CodeArt 0.75
+					Level 1
+					Submarkets [-2; -2; 5 ]
+					}
+					{
+					Name	"Gaming"
+					Description "Become a pro gamer"
+					Dependencies "GPU"
+					DevTime 4
+					CodeArt 0.75
+					Level 2
+					Submarkets [2; 5; 2 ]
+					}
+					{
+					Name	"Overclocked"
+					Description "Become a pro gamer"
+					Dependencies "GPU"
+					DevTime 4
+					CodeArt 0.75
+					Level 2
+					Submarkets [2; 5; 0 ]
+					}
+					{
+					Name		"Microphone surveillance"
+					Description "Listen in on your users' conversations to find and fix bugs before they are reported, at the risk of getting caught"
+					Server		0.0003
+					DevTime		3
+					Level		3
+					CodeArt		1
+					Submarkets	0
+					Script_EndOfDay
+					"if (Product.GetVar(\"MicMining\", true))//Check if player has been caught
+						{
+						Product.Bugs = Max(0, Product.Bugs - Product.Userbase * 0.01);//Remove 1 bug from product for each 100th active user
+						if (Random() * Product.Userbase > 1000000 * Product.Category.Popularity)//Random chance of getting caught
+							{
+							LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
+							Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
+							Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
+							Product.KillAwareness();//Remove all marketing
+							Product.PutVar(\"MicMining\", false);//Mark player as caught for this product
+							}
+						}"
+					}
+				]
+			}
+		]
+	}

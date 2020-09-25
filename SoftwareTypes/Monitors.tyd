@@ -1,0 +1,139 @@
+SoftwareType
+	{
+	Name			"Monitor"
+	Category		Electronics
+	Description		"Screens for every purpose"
+	OneClient		False
+	InHouse			True
+	Random 0.25
+	SubmarketNames	[ Sound; Display; Design ]
+	OptimalDevTime 	36
+	Categories
+		[
+			{
+			Name "Default"
+			Popularity 0.75
+			IdealPrice 250
+			Submarkets [2; 4; 3]
+			Retention 36
+			TimeScale 1
+			Iterative 0.25
+			NameGenerator Monitors
+			}
+		]
+	Features
+		[
+			{
+			Name "System"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 3; 1; 2 ]
+			Features
+				[
+					{
+					Name	"VGA Input"
+					Description "Basic display input"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Submarkets [ 1; 2; 2 ]
+					}
+					{
+					Name	"DVI Input"
+					Description "Basic display input"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Unlock 1999
+					Submarkets [ 1; 2; 2 ]
+					}
+					{
+					Name	"1ms response time"
+					Description "Responsive!"
+					DevTime 4
+					CodeArt 0.8
+					Level 2
+					Unlock 2015
+					Submarkets [ 2; 4; 3 ]
+					}
+					{
+					Name	"HDR Support"
+					Description "Give your pics higher dynamic range"
+					DevTime 4
+					CodeArt 0.8
+					Level 2
+					Unlock 2005
+					Submarkets [ 1; 4; 3 ]
+					}
+					{
+					Name	"HDMI Input"
+					Description "Industry standard input"
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Unlock 2002
+					Submarkets [ 1; 2; 2 ]
+					}
+					{
+					Name	"DisplayPort Input"
+					Description "Display your port"
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Unlock 2006
+					Submarkets [ 1; 2; 2 ]
+					}
+					{
+					Name	"C-Sync"
+					Description "Mvidian C-Sync, no more tearing"
+					DevTime 4
+					CodeArt 0.8
+					Level 2
+					Unlock 2015
+					Submarkets [ 2; 4; 3 ]
+					}
+					{
+					Name	"120hz"
+					Description "Responsive!"
+					DevTime 6
+					CodeArt 0.8
+					Level 3
+					Unlock 2010
+					Submarkets [ 1; 4; 2 ]
+					}
+					
+				]
+			}
+			{
+			Name		Audio
+			Spec		Audio
+			DevTime		6
+			CodeArt		0.75
+			Submarkets	[ 5; 0; 1 ]
+			Dependencies	["Audio Tool"; "Speaker"]
+			Optional True
+			Features
+				[
+					{
+					Name		"Surround sound"
+					Description "The sound is all around us"
+					DevTime		5
+					Level		1
+					CodeArt		0.75
+					Unlock 1985
+					Submarkets	[ 5; 1; 2 ]
+					}
+					{
+					Name		"Audio Jack"
+					Description "The sound is all around us"
+					DevTime		5
+					Level		1
+					CodeArt		0.75
+					Unlock 1985
+					Submarkets	[ 4; 1; -1 ]
+					}
+				]
+			}
+		]
+	}

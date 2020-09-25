@@ -1,0 +1,52 @@
+-start(base,let)
+-base(let,num)
+GL
+Accle
+SumSang
+JUC
+Fell
+Azuz
+-let(num)
+ GL
+ WP
+ GG
+ SP
+ PO
+ AP
+ SL
+ SQ
+ EK
+ SA
+-num(num2)
+1
+2
+3
+4
+5
+6
+7
+8
+9
+-num2(al,end)
+1
+2
+3
+4
+5
+6
+7
+8
+9
+-al(end,stop)
+ k
+ q
+ w
+ o
+ i
+ n
+-end(stop)
+ Ultrawide
+ 4k
+ Curved
+ Pro
+ Gaming

@@ -1,0 +1,92 @@
+SoftwareType
+	{
+	Name			"CPU Cooling"
+	Category		Hardware
+	Description		"Cool your CPU"
+	Random			0.25
+	OneClient		False
+	InHouse			False
+	SubmarketNames	[ Noise Reduction; Cooling; Design ]
+	OptimalDevTime 	38
+	Categories
+		[	
+			{
+			Name "Default"
+			Popularity 0.8
+			IdealPrice 100
+			Submarkets [4; 4; 5]
+			Retention 48
+			TimeScale 1
+			Iterative 0.5
+			NameGenerator Cooling
+			}
+			{
+			Name "AIO Water Cooling"
+			Popularity 1
+			IdealPrice 250
+			Submarkets [4; 4; 5]
+			Retention 36
+			TimeScale 1
+			Iterative 0.5
+			NameGenerator Cooling
+			}
+		]
+	Features
+		[
+			{
+			Name "Design"
+			Spec 3D
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 2; 2; 4 ]
+			Features
+				[
+					{
+					Name	"Included Thermal Paste"
+					Description "Cool Paste"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Submarkets [ 2; 5; 2 ]
+					}
+					{
+					Name	"Silent Mode"
+					Description "Shhhhhhhhhhhhhhhh!"
+					DevTime 6
+					CodeArt 0.9
+					Level 2
+					Unlock 2010
+					Submarkets [ 5; -2; 1 ]
+					}
+					{
+					Name	"Performance mode"
+					Description "RVVVVVVVVVVVVVVVVVV!"
+					DevTime 6
+					CodeArt 0.9
+					Level 2
+					Unlock 2010
+					Submarkets [ -2; 5; 1 ]
+					}
+					{
+					Name	"Stock Cooler"
+					Description "This will make the Cooler inluded in CPUs boosting marketing potential"
+					DevTime 6
+					CodeArt 0.9
+					Level 3
+					Unlock 2005
+					Submarkets [ 1; 1; 1 ]
+					Script_OnRelease "Product.AddToMarketing(MarketSimulation.GetMaxAwareness(Product) * 0.75);"
+					}
+					{
+					Name	"RGB"
+					Description "Release the rainbow"
+					DevTime 6
+					CodeArt 0.5
+					Level 3
+					Unlock 2005
+					Submarkets [ 2; 1; 5 ]
+					}
+				]
+			}
+		]
+	}

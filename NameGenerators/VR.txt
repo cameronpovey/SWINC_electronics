@@ -1,0 +1,24 @@
+-start(base,base2)
+-base(base2,letters,end)
+Iculas
+BZ4
+HBV
+Roozer
+Sumsang
+Noogle
+-base2(letters,end,stop)
+ Vize
+ Fear
+ Shift
+ Best
+-letters(end,stop)
+ X
+ Z
+ C
+ E
+ S
+-end(stop)
+ VR Headset
+ PRO
+ Silm
+ Portable

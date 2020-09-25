@@ -1,0 +1,152 @@
+SoftwareType
+	{
+	Name			"Storage"
+	Category		Hardware
+	Description		"Store anything"
+	Random			0.5
+	OneClient		False
+	InHouse			False
+	SubmarketNames	[ Speed; Capacity; Sustainability ]  
+	OptimalDevTime 	38
+	Categories
+		[
+			{
+			Name "Hard Drive"
+			Popularity 0.75
+			IdealPrice 100
+			Submarkets [3; 12; 6]
+			Retention 48
+			TimeScale 1
+			Iterative 0
+			NameGenerator Storage
+			}
+			{
+			Name "Solid State Drive"
+			Popularity 1
+			IdealPrice 200
+			Submarkets [12; 6; 9]
+			Retention 48
+			TimeScale 1
+			Iterative 0.25
+			Unlock 1990
+			NameGenerator Storage
+			}
+		]
+	Features
+		[
+			{
+			Name "System"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 3; 1; 2 ]
+			Features
+				[
+					{
+					Name	"RAID Capable"
+					Description "Combine 2 into 1"
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Submarkets [4; 4; 6 ]
+					Unlock 2000
+					}
+					{
+					Name	"Capacity Boost"
+					Description "More storage"
+					DevTime 4
+					CodeArt 0.9
+					Level 2
+					Submarkets [ 2; 10; 4 ]
+					Unlock 2005
+					}
+					{
+					Name	"Speed Boost"
+					Description "More speed"
+					DevTime 4
+					CodeArt 0.9
+					Level 2
+					Submarkets [ 10; 2; 4 ]
+					Unlock 2005
+					}
+					
+				]
+			}
+			{
+			Name "Storage Amount"
+			Spec 3D
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 3; 1; 2 ]
+			Optional False
+			Features
+				[
+					{
+					Name	"Initial 250 GB"
+					Description "250 Gigabytes of storage"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Submarkets [1; 3; 1 ]
+					Optional False
+					}
+					{
+					Name	"+ 250 GB"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Submarkets [1; 3; 1 ]
+					Unlock 2000
+					}
+					{
+					Name	"+ 500 GB"
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Submarkets [1; 4; 1 ]
+					Unlock 2005
+					}
+					{
+					Name	"+ 1 TB"
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Submarkets [1; 4; 1 ]
+					Unlock 2005
+					}
+					{
+					Name	"+ 2 TB"
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Submarkets [1; 4; 1 ]
+					Unlock 2007
+					}
+					{
+					Name	"+ 4 TB"
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Submarkets [1; 4; 1 ]
+					Unlock 2009
+					}
+					{
+					Name	"+ 8 TB"
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Submarkets [1; 4; 1 ]
+					Unlock 2010
+					}
+					{
+					Name	"+ 16 TB"
+					DevTime 2
+					CodeArt 0.9
+					Level 3
+					Submarkets [1; 4; 1 ]
+					Unlock 2010
+					}
+				]
+			}
+		]
+	}

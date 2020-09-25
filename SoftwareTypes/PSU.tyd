@@ -1,0 +1,80 @@
+SoftwareType
+	{
+	Name			"PSU"
+	Category		Hardware
+	Description		"Power Supply Units"
+	Random			0.5
+	OneClient		False
+	InHouse			False
+	SubmarketNames	[ Capacity; Power Efficiency; Design ]
+	OptimalDevTime 	38
+	Categories
+		[
+			{
+			Name "Default"
+			Popularity 0.75
+			IdealPrice 150
+			Submarkets [3; 3; 4]
+			Retention 48
+			TimeScale 1
+			Iterative 0.25
+			NameGenerator PSU
+			}
+		]
+	Features
+		[
+			{
+			Name "System"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 2; 2; 4 ]
+			Features
+				[
+					{
+					Name	"Modular"
+					Description "Remove unnecessary cables"
+					DevTime 4
+					CodeArt 0.9
+					Level 1
+					Submarkets [ 1; 3; 3 ]
+					}
+					{
+					Name	"Integrated fan"
+					Description "Cool your power"
+					DevTime 4
+					CodeArt 0.9
+					Level 1
+					Submarkets [ 1; 5; 3 ]
+					}
+					{
+					Name	"Capacity boost"
+					Description "MORE POWERRR!"
+					DevTime 5
+					CodeArt 0.9
+					Level 2
+					Unlock 2005
+					Submarkets [ 5; 1; 1 ]
+					}
+					{
+					Name	"Platinum Efficiency"
+					Description "How Efficient"
+					DevTime 6
+					CodeArt 0.9
+					Level 3
+					Unlock 2007
+					Submarkets [ 1; 5; 1 ]
+					}
+					{
+					Name	"RGB"
+					Description "Why not"
+					DevTime 8
+					CodeArt 0.5
+					Level 3
+					Unlock 2005
+					Submarkets [ 1; 1; 5 ]
+					}
+				]
+			}
+		]
+	}

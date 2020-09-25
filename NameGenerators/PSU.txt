@@ -1,0 +1,26 @@
+-start(base,base2)
+-base(base2)
+Corpair
+HZYT
+Fractal Designs
+Thermalgive
+EVVA
+BeLoud
+-base2(num,end,stop)
+ Clever
+ TG
+ CW
+ HZ
+ Modular
+-num(end)
+ 250
+ 500
+ 750
+ 1000
+ 1500
+-end(stop)
+ Certified
+ Zero
+ RGB
+ ATX
+ 

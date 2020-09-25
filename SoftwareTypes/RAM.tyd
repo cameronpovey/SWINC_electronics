@@ -1,0 +1,73 @@
+SoftwareType
+	{
+	Name			"RAM"
+	Category		Hardware
+	Description		"Random Access Memory"
+	Random			0.5
+	OneClient		False
+	InHouse			False
+	SubmarketNames	[ Functionality; Gaming; Design ]
+	OptimalDevTime 	38
+	Categories
+		[
+			{
+			Name "Default"
+			Popularity 1
+			IdealPrice 200
+			Submarkets [3; 3; 4]
+			Retention 48
+			TimeScale 1
+			Iterative 0.2
+			NameGenerator RAM
+			}
+		]
+	Features
+		[
+			{
+			Name "System"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 2; 2; 4 ]
+			Features
+				[
+					{
+					Name	"Speed Boost"
+					Description "Faster RAM"
+					DevTime 5
+					CodeArt 0.9
+					Unlock 2000
+					Level 1
+					Submarkets [ 3; 3; 1 ]
+					}
+					{
+					Name	"DDR4"
+					Description "The fourth DDR"
+					DevTime 5
+					CodeArt 0.9
+					Unlock 2014
+					Level 2
+					Submarkets [ 3; 3; 1 ]
+					}
+					{
+					Name	"RGB"
+					Description "Release the rainbow"
+					DevTime 6
+					CodeArt 0.5
+					Level 3
+					Unlock 2005
+					Submarkets [ 1; 2; 5 ]
+					}
+					{
+					Name	"Downloadable RAM"
+					Description "Just download more ram"
+					DevTime 8
+					CodeArt 1
+					Level 3
+					Unlock 2020
+					Submarkets [ 6; 2; 0 ]
+					}
+				]
+			}
+		]
+	}

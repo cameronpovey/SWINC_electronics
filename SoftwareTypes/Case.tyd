@@ -1,0 +1,116 @@
+SoftwareType
+	{
+	Name			"Case"
+	Category		Hardware
+	Description		"Holds Everything!"
+	Random			0.5
+	OneClient		False
+	InHouse			False
+	SubmarketNames	[ Functionality; Cooling; Design ]
+	OptimalDevTime 	38
+	Categories
+		[
+			{
+			Name "Default"
+			Popularity 0.75
+			IdealPrice 100
+			Submarkets [3; 3; 4]
+			Retention 48
+			TimeScale 1
+			Iterative 0.5
+			NameGenerator Case
+			}
+		]
+	Features
+		[
+			{
+			Name "Design"
+			Spec 3D
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 2; 2; 4 ]
+			Features
+				[
+					{
+					Name	"Integrated Cable Management"
+					Description "Manage your cables today!"
+					DevTime 5
+					CodeArt 0.5
+					Level 1
+					Submarkets [ 3; 1; 5 ]
+					}
+					{
+					Name	"Glass Side Panel"
+					Description "Look at your computer!"
+					DevTime 6
+					CodeArt 0.5
+					Level 2
+					Submarkets [ 2; 2; 4 ]
+					Unlock 2005
+					}
+					{
+					Name	"Water Cooling Support"
+					Description "Wat-er you talking about?"
+					DevTime 6
+					CodeArt 0.5
+					Level 2
+					Submarkets [ 2; 5; 2 ]
+					Unlock 2010
+					}
+					{
+					Name	"RGB"
+					Description "Release the rainbow"
+					DevTime 8
+					CodeArt 0.5
+					Level 3
+					Unlock 2005
+					Submarkets [ 1; 1; 5 ]
+					}
+				]
+			}
+			{
+			Name "Front IO"
+			Spec System
+			Description "Add more functionality or have a clean look"
+			CodeArt 0.75
+			DevTime 3
+			Submarkets	[ 4; 1; 1 ]
+			Optional	True
+			Features
+				[
+					{
+					Name	"Power Button"
+					Description "I HAVE THE POWEERRRRR!"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Submarkets [ 4; 4; 2 ]
+					}
+					{
+					Name	"Front Audio Jack"
+					DevTime 4
+					CodeArt 0.75
+					Level 1
+					Submarkets [ 4; 1; 1 ]
+					}
+					{
+					Name	"USB port"
+					DevTime 4
+					CodeArt 0.75
+					Level 2
+					Unlock 1995
+					Submarkets [ 4; 1; 2 ]
+					}
+					{
+					Name	"USB3 port"
+					Description "Faster and better!"
+					DevTime 4
+					CodeArt 0.75
+					Level 3
+					Unlock 2011
+					Submarkets [ 4; 2; 2 ]
+					}
+				]
+			}
+		]
+	}

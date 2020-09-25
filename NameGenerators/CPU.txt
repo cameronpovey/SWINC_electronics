@@ -1,0 +1,45 @@
+-start(base,base2)
+-base(base2,base3,base4,basend)
+Infel
+AMZ
+-basend(stop)
+ SX
+ Ryzan
+ e7
+ e5
+ e4
+ e3
+ e9
+-base2(base3,base4)
+ SX
+ Ryzan
+ e7
+ e5
+ e4
+ e3
+ e9
+-base3(base4)
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+-base4(end,stop)
+100
+200
+300
+400
+500
+600
+700
+800
+900
+-end(stop)
+K
+X
+i
+c

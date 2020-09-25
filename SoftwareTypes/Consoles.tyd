@@ -1,0 +1,127 @@
+SoftwareType
+	{
+	Name			"Console"
+	Category		Electronics
+	Description		"For all your computing needs"
+	Random			0.2
+	OneClient		False
+	InHouse			False
+	SubmarketNames	[ Functionality; Speed; Design ]
+	
+	OptimalDevTime 	36
+	Categories
+		[
+			{
+			Name "Default"
+			Popularity 0.25
+			IdealPrice 500
+			Submarkets [5; 5; 5]
+			Retention 36
+			TimeScale 1
+			Iterative 0.2
+			NameGenerator Consoles
+			}
+		]
+	Features
+		[
+			{
+			Name "System"
+			Spec 3D
+			Dependencies	["CPU"; "Motherboard"; "RAM"; "PSU"; "CPU Cooling"; "Storage"; "Case"]
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 3; 1; 2 ]
+			Features
+				[
+					{
+					Name	"Mini"
+					Description "Small console. Need Dongle."
+					Dependencies "Dongle"
+					DevTime 2
+					CodeArt 0.75
+					Level 1
+					Submarkets [-2; -2; 5 ]
+					}
+					{
+					Name	"Disc Compatible"
+					Description "Thin round things hold games"
+					DevTime 4
+					CodeArt 0.75
+					Level 2
+					Unlock 1985
+					Submarkets [2; 5; 1 ]
+					}
+					{
+					Name	"VR Capable"
+					Description "Reality which isn't real"
+					Dependencies "VR Headset"
+					DevTime 4
+					CodeArt 0.75
+					Level 2
+					Unlock 2015
+					Submarkets [5; 2; 3 ]
+					}
+					{
+					Name	"Silent"
+					Description "I can see you, can you hear me?"
+					DevTime 6
+					CodeArt 0.9
+					Level 2
+					Unlock 2010
+					Submarkets [ 5; -2; 1 ]
+					}
+					{
+					Name		"Microphone surveillance"
+					Description "Listen in on your users' conversations to find and fix bugs before they are reported, at the risk of getting caught"
+					Server		0.0003
+					DevTime		3
+					Level		3
+					CodeArt		1
+					Submarkets	0
+					Script_EndOfDay
+					"if (Product.GetVar(\"MicMining\", true))//Check if player has been caught
+						{
+						Product.Bugs = Max(0, Product.Bugs - Product.Userbase * 0.01);//Remove 1 bug from product for each 100th active user
+						if (Random() * Product.Userbase > 1000000 * Product.Category.Popularity)//Random chance of getting caught
+							{
+							LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
+							Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
+							Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
+							Product.KillAwareness();//Remove all marketing
+							Product.PutVar(\"MicMining\", false);//Mark player as caught for this product
+							}
+						}"
+					}
+				]
+			}
+			{
+			Name "Controllers"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 3; 1; 2 ]
+			Optional False
+			Features
+				[
+					{
+					Name	"Wireless"
+					Description "Twice the controlling"
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Unlock 2000
+					Submarkets [3; 5; 1 ]
+					}
+					{
+					Name	"Customizable"
+					Description "Make it your own"
+					DevTime 4
+					CodeArt 0.9
+					Level 2
+					Unlock 2005
+					Submarkets [3; 5; 1 ]
+					}
+				]
+			}
+		]
+	}

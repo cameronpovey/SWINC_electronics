@@ -1,0 +1,48 @@
+-start(base,base2)
+-base(base2,base3,basend)
+AZUZ
+Megabyte
+PSI
+-basend(stop)
+ ROD Z
+ Z
+ X
+ MLG
+ Lime
+ C
+ B
+-base2(base3)
+ ROD Z
+ Z
+ X
+ MLG
+ Lime
+ C
+ B
+-base3(base4)
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+-base4(end,stop)
+10
+20
+30
+40
+50
+60
+70
+80
+90
+
+-end(stop)
+ a
+ b
+ c
+ d
+ e

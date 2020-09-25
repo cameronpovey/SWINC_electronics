@@ -1,0 +1,35 @@
+-start(base,base2)
+-base(base2,num,end)
+Anca
+Accle
+SumSang
+Wundoos
+Noogle
+Omozan
+Pony
+JBB
+Nose
+Fetron
+Rony
+-base2(num)
+ WI
+ EP
+ MDE
+ BZ
+ IP
+-num(end,stop)
+3059
+1485
+1204
+1011
+3100
+-end(stop)
+ Wireless
+ Bluetooth
+ OnEar
+ InEar
+ Wired
+ Headphones
+ Earphones
+ Portable
+ Noise Cancelling

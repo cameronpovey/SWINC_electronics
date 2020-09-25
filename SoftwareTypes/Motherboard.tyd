@@ -1,0 +1,158 @@
+SoftwareType
+	{
+	Name			"Motherboard"
+	Category		Hardware
+	Description		"The Mother for all your computer parts"
+	Random			0.4
+	OneClient		False
+	InHouse			False
+	SubmarketNames	[ Speed; Functionality; Design]
+	OptimalDevTime 	50
+	NameGenerator Motherboard
+	Categories
+		[
+			{
+			Name "ATX"
+			Popularity 0.2
+			IdealPrice 300
+			Submarkets [3; 1; 6]
+			Retention 40
+			TimeScale 1
+			Iterative 0
+			Description "Full Size"
+			}
+			{
+			Name "EATX"
+			Popularity 0.15
+			IdealPrice 250
+			Submarkets [3; 1; 6]
+			Retention 38
+			TimeScale 1
+			Iterative 0
+			Description "Plus Size"
+			}
+			{
+			Name "Micro ATX"
+			Popularity 0.1
+			IdealPrice 200
+			Submarkets [3; 1; 6]
+			Retention 36
+			TimeScale 1
+			Iterative 0
+			Dependencies	"Dongle"
+			Description "Small Size"
+
+			}
+		]
+	Features
+		[
+			{
+			Name "System"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 2; 2; 2 ]
+			Features
+				[
+					{
+					Name	"VGA Output"
+					Description "Basic display output"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Submarkets [ -1; 2; 1 ]
+					}
+					{
+					Name	"HDMI Output"
+					Description "Industry standard output"
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Submarkets [ 2; 2; 3 ]
+					}
+					{
+					Name	"DisplayPort output"
+					Description "Display your port"
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Submarkets [ 2; 2; 3 ]
+					}
+					{
+					Name	"More Ports"
+					Description "More Output"
+					DevTime 5
+					CodeArt 0.9
+					Level 2
+					Unlock 2005
+					Submarkets [ 5; 5; 5 ]
+					}
+					{
+					Name	"M.2 Capable"
+					Description "Storage.2"
+					DevTime 5
+					CodeArt 0.9
+					Level 2
+					Unlock 2010
+					Submarkets [ 5; 4; 2 ]
+					}
+					{
+					Name	"RGB"
+					Description "Release the rainbow"
+					DevTime 8
+					CodeArt 0.5
+					Level 3
+					Unlock 2005
+					Submarkets [ 2; 2; 3 ]
+					}
+				]
+			}
+			{
+			Name "Audio Output"
+			Spec Audio
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 2; 2; 2 ]
+			Features
+				[]
+			}
+			{
+			Name "Network"
+			Spec Network
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 2; 2; 2 ]
+			Optional True
+			Unlock 1990
+			Features
+				[
+					{
+					Name	"Ethernet Port"
+					Description "Wired!"
+					DevTime 4
+					CodeArt 0.75
+					Level 1
+					Submarkets [ 4; 1; 2 ]
+					}
+					{
+					Name	"Integrated Bluetooth"
+					Description "Go to the dentist!"
+					DevTime 4
+					CodeArt 0.9
+					Level 2
+					Submarkets [ 4; 3; 2 ]
+					}
+					{
+					Name	"Integrated Wifi"
+					Description "But why fi?"
+					DevTime 4
+					CodeArt 0.75
+					Level 2
+					Unlock 1999
+					Submarkets [ 4; 1; 2 ]
+					Server		0.0002
+					}
+				]
+			}
+		]
+	}

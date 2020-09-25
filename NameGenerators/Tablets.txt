@@ -1,0 +1,30 @@
+-start(base,base3)
+-base(base2,base3,end2)
+Accle
+SumSang
+Noogle
+Wundoos
+Rainforest
+-base2(end,basend)
+ e
+ c
+ m
+ k
+ s
+ t
+-basend(end,stop)
+ Tabb
+ Tablet
+-base3(end2,end)
+ Tabb
+ Tablet
+-end2(stop)
+ C
+ E
+ S
+ M
+ A
+ D
+-end(stop)
+ Pro
+ Slim

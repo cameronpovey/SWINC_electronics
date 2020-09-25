@@ -1,0 +1,313 @@
+SoftwareType
+	{
+	Name			"Laptop"
+	Category		Electronics
+	Description		"Does what it says"
+	Random			0.5
+	OneClient		False
+	InHouse			False
+	OptimalDevTime 	60
+	NameGenerator Laptops
+	SubmarketNames	[ Speed; Security; Design ]
+	Categories
+		[
+			{
+			Name "Default"
+			Popularity 0.2
+			IdealPrice 600
+			Submarkets [5; 4; 2]
+			Retention 48
+			TimeScale 1
+			Iterative 0.8
+			NameGenerator Laptops
+			}
+			{
+			Name "2 in 1"
+			Description "Switch between laptop and tablet with ease"
+			Popularity 0.1
+			IdealPrice 800
+			Submarkets [4; 3; 3]
+			Retention 46
+			TimeScale 1
+			Iterative 0.8
+			Unlock 2010
+			NameGenerator Laptops
+			}
+		]
+	Features
+		[
+			{
+			Name "System"
+			Spec System
+			Dependencies	["CPU"; "Motherboard"; "RAM"; "PSU"; "CPU Cooling"; "Storage"; "Speaker"; "Case"]
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 3; 1; 2 ]
+			Features
+				[
+					{
+					Name	"Trackpad"
+					Description "No more external mice"
+					DevTime 1
+					CodeArt 0.8
+					Level 1
+					Submarkets [ 4; 3; 2 ]
+					}
+					{
+					Name	"Bluetooth"
+					Description "If you have a blue tooth you should get it checked out"
+					DevTime 2
+					CodeArt 1
+					Unlock 1999
+					Level 1
+					Submarkets [ 3; 1; 2 ]
+					}
+					{
+					Name	"Webcam"
+					Description "Ok, Zoomer"
+					DevTime 4
+					CodeArt 0.5
+					Level 2
+					Unlock 2003
+					Submarkets [ 1; 3; 3 ]
+					}
+					{
+					Name	"USB-C Compatability"
+					Description "Let us C"
+					DevTime 4
+					CodeArt 0.75
+					Level 2
+					Unlock 2014
+					Submarkets [ 3; 2; 3 ]
+					}
+					{
+					Name	"Fingerprint Reader"
+					Description "Reading the fingerprint since 2004"
+					DevTime 4
+					CodeArt 0.75
+					Level 2
+					Unlock 2010
+					Submarkets [ 3; 7; 3 ]
+					}
+					{
+					Name	"Stylus"
+					Description "Draw on your Laptop!"
+					DevTime 6
+					CodeArt 0.5
+					Level 2
+					Unlock 2010
+					Submarkets [ 4; 3; 5 ]
+					}
+					{
+					Name	"RGB"
+					Description "Release the rainbow"
+					DevTime 8
+					CodeArt 0.5
+					Level 3
+					Unlock 2005
+					Submarkets [ 2; 2; 3 ]
+					}
+					{
+					Name	"Facial Recognition"
+					Description "Wundoos hello"
+					DevTime 6
+					CodeArt 0.9
+					Level 3
+					Unlock 2010
+					Submarkets [ 3; 6; 1 ]
+					}
+					{
+					Name	"Super Thin"
+					Dependencies "Dongle"
+					Description "So thin it removes the ports - Needs dongle to operate"
+					DevTime 6
+					CodeArt 0.9
+					Level 3
+					Unlock 2010
+					Submarkets [ 3; 5; 3 ]
+					}
+					{
+					Name	"Gaming"
+					Dependencies "GPU"
+					Description "For gamers"
+					DevTime 12
+					CodeArt 0.9
+					Level 3
+					Unlock 2005
+					Submarkets [ 6; 3; 4 ]
+					}
+					{
+					Name		"Bit mining"
+					Description	"Mine bitcoin using your users' GPU to make an extra {Currency:0.1} per active user, at the risk of getting caught"
+					Server		0.0003
+					DevTime		6
+					Level		3
+					CodeArt		1
+					Submarkets	0
+					Script_EndOfDay
+					"if (Product.GetVar(\"Bitmining\", true))//Check if player has been caught
+						{
+						var extra = Product.Userbase * 0.1;//Calculate extra income
+						Product.DevCompany.MakeTransaction(extra, Sales, \"Datamining\");//Add money
+						Product.AddToCashflow(0, 0, 0, extra, 0, Time);//Add to product income chart
+						if (Random() * Product.Userbase > 400000)//Random chance of getting caught
+							{
+								LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
+								Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
+								Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
+								Product.KillAwareness();//Remove all marketing
+								Product.PutVar(\"Bitmining\", false);//Mark player as caught for this product
+							}
+						}"
+					}
+				]
+			}
+	
+			{
+			Name		Audio
+			Spec		Audio
+			DevTime		6
+			CodeArt		1
+			Submarkets	[ 1; 0; 1 ]
+			Dependencies	"Audio Tool"
+			Features
+				[
+					{
+					Name		"Surround sound"
+					Description "The sound is all around us"
+					DevTime		5
+					Level		1
+					CodeArt		0.75
+					Unlock 1985
+					Submarkets	[ 1; 1; 3 ]
+					}
+					{
+					Name		"Speech recognition"
+					Description "Ok Noogle"
+					DevTime		5
+					Level		2
+					CodeArt		0.9
+					Unlock 1990
+					Submarkets	[ 3; 0; 1 ]
+					}
+					{
+					Name		"Microphone surveillance"
+					Description "Listen in on your users' conversations to find and fix bugs before they are reported, at the risk of getting caught"
+					Server		0.0003
+					DevTime		3
+					Level		3
+					CodeArt		1
+					Submarkets	0
+					Script_EndOfDay
+					"if (Product.GetVar(\"MicMining\", true))//Check if player has been caught
+						{
+						Product.Bugs = Max(0, Product.Bugs - Product.Userbase * 0.01);//Remove 1 bug from product for each 100th active user
+						if (Random() * Product.Userbase > 1000000 * Product.Category.Popularity)//Random chance of getting caught
+							{
+							LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
+							Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
+							Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
+							Product.KillAwareness();//Remove all marketing
+							Product.PutVar(\"MicMining\", false);//Mark player as caught for this product
+							}
+						}"
+					}
+				]
+			}
+	
+			{
+			Name "Screen"
+			Spec 2D
+			CodeArt 0.5
+			DevTime 4
+			Submarkets	[ 1; 3; 4 ]
+			Dependencies	["2D Editor"; "Monitor"]
+			Optional False
+			Features
+				[
+					{
+					Name	"Amoled"
+					Description "Ohhhhhhh LED"
+					DevTime 4
+					CodeArt 0.5
+					Level 2
+					Unlock 2007
+					Submarkets [ 3; 1; 4 ]
+					}
+					{
+					Name	"HDR Support"
+					Description "Give your pics higher dynamic range"
+					DevTime 4
+					CodeArt 0.25
+					Level 2
+					Unlock 1999
+					Submarkets [ 1; 1; 4 ]
+					}
+					{
+					Name	"4k Screen"
+					Description "4 times as many k's"
+					DevTime 5
+					CodeArt 0.5
+					Level 3
+					Unlock 2013
+					Submarkets [ 1; 1; 4 ]
+					}
+					{
+					Name	"Holographic Display"
+					Description "Help me obi-one, you're my only hope"
+					DevTime 8
+					CodeArt 0.75
+					Level 3
+					Unlock 2025
+					Submarkets [ 4; 1; 4 ]
+					}
+				]
+			}
+	
+			{
+			Name "3D Rendering"
+			Spec 3D
+			CodeArt 0.1
+			DevTime 8
+			Submarkets	[ 1; 3; 5 ]
+			Unlock 1990
+			Optional True
+			Dependencies	["3D Editor"; "GPU"]
+			Features
+			[]
+			}
+			
+			{
+			Name "Networking"
+			Spec Network
+			CodeArt 0.75
+			DevTime 3
+			Submarkets	[ 4; 1; 2 ]
+			Unlock 1985
+			Optional True
+			Features
+				[
+					{
+					Name	"Wifi"
+					Description "But why fi?"
+					DevTime 4
+					CodeArt 0.75
+					Level 1
+					Unlock 1999
+					Submarkets [ 4; 1; 2 ]
+					Server		0.0002
+					}
+					{
+					Name	"Built in VPN"
+					Description "Sponsored by Lord VPM"
+					DevTime 4
+					CodeArt 0.8
+					Level 2
+					Unlock 1999
+					Submarkets [ 4; 1; 2 ]
+					Server		0.0002
+					}
+				]
+			}
+		]
+	}

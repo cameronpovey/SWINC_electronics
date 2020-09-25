@@ -1,0 +1,35 @@
+-start(base,base2,num)
+-base(num,base)
+Sumsang
+Corpair
+Seabait
+WP
+Rucial
+FanDisk
+-base2(num)
+ SX
+ WX
+ PX
+ EM
+ LW
+ SA
+ IO
+ SD
+ HD
+-num(base3,end)
+ 150
+ 630
+ 840
+ 650
+ 580
+ 800
+ 890
+ 990
+-base3(end,stop)
+ EZO
+ SSD
+-end(stop)
+ Pro
+ Gaming
+ SuperFast
+ Fast

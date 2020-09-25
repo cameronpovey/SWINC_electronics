@@ -1,0 +1,17 @@
+-start(base,basend2)
+-base(base2,end)
+Anca
+Accle
+SumSang
+Wundoos
+Noogle
+-base2(end,stop)
+ USB
+ USB C 
+-basend2(end,)
+ USB
+ USB C 
+-end(stop)
+ Adapter
+ dongle
+ hub

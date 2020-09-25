@@ -1,0 +1,101 @@
+SoftwareType
+	{
+	Name			"VR Headset"
+	Category		Electronics
+	Description		"It looks like real life!"
+	Random			0.3
+	OneClient		False
+	InHouse			False
+	SubmarketNames	[ Functionality; Display; Comfort ]
+	OptimalDevTime 	36
+	Unlock 2010
+	Categories
+		[
+			{
+			Name "Default"
+			Popularity 0.05
+			IdealPrice 1000
+			Submarkets [4; 8; 3]
+			Retention 36
+			TimeScale 1
+			Iterative 0.1
+			NameGenerator VR
+			}
+		]
+	Features
+		[
+			{
+			Name "Headset"
+			Spec 3D
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 3; 1; 2 ]
+			Features
+				[
+					{
+					Name	"Built-in speakers"
+					Description "Hear the VR"
+					DevTime 2
+					CodeArt 0.75
+					Level 1
+					Submarkets [3; 1; 2 ]
+					}
+					{
+					Name	"Tracking improvements"
+					Description "Tracking with even more precision "
+					DevTime 4
+					CodeArt 0.75
+					Level 2
+					Unlock 2015
+					Submarkets [4; 1; 2 ]
+					}
+					{
+					Name	"No wires!"
+					Description "You can now walk wherever you want"
+					DevTime 6
+					CodeArt 0.75
+					Level 3
+					Unlock 2020
+					Submarkets [4; 1; 2 ]
+					}
+					{
+					Name	"Omnidirectional treadmill"
+					Description "You can now walk wherever you want"
+					DevTime 6
+					CodeArt 0.75
+					Level 3
+					Unlock 2025
+					Submarkets [4; 1; 2 ]
+					}
+				]
+			}
+			{
+			Name "Controllers"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 3; 1; 2 ]
+			Optional False
+			Features
+				[
+					{
+					Name	"Two Controllers"
+					Description "Twice the controlling"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Submarkets [3; 5; 1 ]
+					}
+					{
+					Name	"Hand Tracking"
+					Description "No pysical controllers but will track your hand movements"
+					DevTime 4
+					CodeArt 0.9
+					Level 2
+					Unlock 2025
+					Submarkets [3; 5; 1 ]
+					}
+				]
+			}
+		]
+	}

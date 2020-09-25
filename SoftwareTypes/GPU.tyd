@@ -1,0 +1,154 @@
+SoftwareType
+	{
+	Name			"GPU"
+	Category		Hardware
+	Description		"Graphics Processing Unit"
+	Random			0.5
+	OneClient		False
+	InHouse			False
+	SubmarketNames	[ Speed; Multitasking; Gaming ]
+	OptimalDevTime 	50
+	Unlock 1995
+	Categories
+		[
+			{
+			Name "Default"
+			Popularity 0.3
+			IdealPrice 500
+			Submarkets [3; 1; 6]
+			Retention 48
+			TimeScale 1
+			Iterative 0
+			Dependencies "Motherboard"
+			NameGenerator GPU
+			}
+		]
+	Features
+		[
+			{
+			Name "System"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 2; 2; 2 ]
+			Features
+				[
+					{
+					Name	"VGA Output"
+					Description "Basic display output"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Submarkets [ -1; 2; 2 ]
+					}
+					{
+					Name	"DVI Output"
+					Description "Basic display output"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Unlock 1999
+					Submarkets [ -1; 2; 2 ]
+					}
+					{
+					Name	"Multimonitor support"
+					Description "More Screens!"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Submarkets [ 1; 5; 2 ]
+					}
+					{
+					Name	"HDMI Output"
+					Description "Industry standard output"
+					DevTime 4
+					CodeArt 0.9
+					Level 2
+					Unlock 2002
+					Submarkets [ 2; 2; 3 ]
+					}
+					{
+					Name	"DisplayPort output"
+					Description "Display your port"
+					DevTime 4
+					CodeArt 0.9
+					Level 2
+					Unlock 2006
+					Submarkets [ 2; 2; 3 ]
+					}
+					{
+					Name	"SLI Support"
+					Description "2 is better than 1"
+					DevTime 8
+					CodeArt 0.9
+					Level 3
+					Unlock 2005
+					Submarkets [ 4; 4; 5 ]
+					}
+					{
+					Name	"RGB"
+					Description "Release the rainbow"
+					DevTime 8
+					CodeArt 0.5
+					Level 3
+					Unlock 2005
+					Submarkets [ 2; 2; 2 ]
+					}
+				]
+			}
+			{
+			Name "Graphics"
+			Spec 3D
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 1; 2; 3 ]
+			Dependencies	"3D Editor"
+			Optional False
+			Features
+				[
+					{
+					Name	"VR Capable"
+					Description "It looks like its "
+					DevTime 2
+					CodeArt 0.9
+					Level 2
+					Unlock 2010
+					Submarkets [ 2; 2; 3 ]
+					}
+					{
+					Name	"Ray-Tracing"
+					Description "Ray likes to trace"
+					DevTime 8
+					CodeArt 0.75
+					Level 3
+					Unlock 2018
+					Submarkets [ 3; 2; 4 ]
+					}
+					{
+					Name		"Bit mining"
+					Description	"Mine bitcoin using your users' GPU to make an extra {Currency:0.1} per active user, at the risk of getting caught"
+					Server		0.0003
+					DevTime		6
+					Level		3
+					CodeArt		1
+					Submarkets	0
+					Script_EndOfDay
+					"if (Product.GetVar(\"Bitmining\", true))//Check if player has been caught
+						{
+						var extra = Product.Userbase * 0.1;//Calculate extra income
+						Product.DevCompany.MakeTransaction(extra, Sales, \"Datamining\");//Add money
+						Product.AddToCashflow(0, 0, 0, extra, 0, Time);//Add to product income chart
+						if (Random() * Product.Userbase > 400000)//Random chance of getting caught
+							{
+								LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
+								Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
+								Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
+								Product.KillAwareness();//Remove all marketing
+								Product.PutVar(\"Bitmining\", false);//Mark player as caught for this product
+							}
+						}"
+					}
+				]
+			}
+		]
+	}

@@ -1,0 +1,51 @@
+CompanyType
+	{
+	Specialization		"Consumer Electronics"
+	PerYear				0.2
+	Min					4
+	Max					8
+	Types
+		[
+			{
+			Software 	"Mobile Phone"
+			Chance 		0.75
+			}
+			{
+			Software	"Tablet"
+			Chance		0.5
+			}
+			{
+			Software	"Laptop"
+			Chance		0.5
+			}
+			{
+			Software	"Smart Watch"
+			Chance		0.5
+			}
+			{
+			Software	"Dongle"
+			Chance		0.25
+			}
+			{
+			Software	"Speaker"
+			Chance		0.15
+			Force 		True
+			}
+			{
+			Software	"Headphones"
+			Chance		0.15
+			}
+			{
+			Software	"VR Headset"
+			Chance		0.1
+			}
+			{
+			Software	"Computer"
+			Chance		0.1
+			}
+			{
+			Software	"Console"
+			Chance		0.1
+			}
+		]
+	}

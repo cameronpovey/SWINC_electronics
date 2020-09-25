@@ -1,0 +1,54 @@
+CompanyType
+	{
+	Specialization		"Hardware"
+	PerYear				0.2
+	Min					2
+	Max					4
+	Types
+		[
+			{
+			Software 	"CPU"
+			Chance 		0.5
+			Force		True
+			}
+			{
+			Software	"GPU"
+			Chance		0.5
+			}
+			{
+			Software	"Motherboard"
+			Chance		0.5
+			Force		True
+			}
+			{
+			Software	"Monitor"
+			Chance		0.5
+			Force		True
+			}
+			{
+			Software	"Case"
+			Chance		0.25
+			Force		True
+			}
+			{
+			Software	"Storage"
+			Chance		0.25
+			Force		True
+			}
+			{
+			Software	"RAM"
+			Chance		0.25
+			Force		True
+			}
+			{
+			Software	"PSU"
+			Chance		0.25
+			Force		True
+			}
+			{
+			Software	"CPU Cooling"
+			Chance		0.25
+			Force		True
+			}
+		]
+	}

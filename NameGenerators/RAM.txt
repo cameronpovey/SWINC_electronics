@@ -1,0 +1,23 @@
+-start(base,base2)
+-base(base2,rgb)
+Corpair
+Z.Skill
+HyperC
+Rucial
+-base2(rgb,ddr,end)
+ Ury
+ CMQ
+ WPA
+ EMR
+ HYX
+ Alien
+-rgb(ddr,end,stop)
+ RGB
+-ddr(end,stop)
+ DDR2
+ DDR3
+ DDR4
+ DDR5
+-end(stop,)
+ PRO
+ GAMING

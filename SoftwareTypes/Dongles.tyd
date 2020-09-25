@@ -1,0 +1,115 @@
+SoftwareType
+	{
+	Name			"Dongle"
+	Category		Electronics
+	Description		"Donglessssssss"
+	Random			0.5
+	OneClient		False
+	InHouse			False
+	SubmarketNames	[ Speed; Functionality; Design ]
+	OptimalDevTime 	24
+	Unlock 2005
+	Categories
+		[
+			{
+			Name "Default"
+			Popularity 0.75
+			IdealPrice 50
+			Submarkets [3; 4; 2]
+			Retention 48
+			TimeScale 1
+			Iterative 0
+			NameGenerator Dongles
+			}
+		]
+	Features
+		[
+			{
+			Name "System"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 3; 1; 2 ]
+			Features
+				[
+					{
+					Name	"USB Ports"
+					Description "For all your USB needs"
+					DevTime 2
+					CodeArt 0.9
+					Level 1
+					Submarkets [ 1; 2; 2 ]
+					}
+					{
+					Name	"SD Card Slot"
+					Description "Expand the storage"
+					DevTime 3
+					CodeArt 0.9
+					Level 1
+					Unlock 1990
+					Submarkets [ 3; 2; 2 ]
+					}
+					{
+					Name	"HDMI Output"
+					Description "MORE SCREENS!"
+					DevTime 4
+					CodeArt 0.9
+					Level 2
+					Unlock 2003
+					Submarkets [ 3; 3; 2 ]
+					}
+					
+				]
+			}
+			{
+			Name		Audio
+			Spec		Audio
+			DevTime		6
+			CodeArt		1
+			Submarkets	[ 2; 1; 2 ]
+			Dependencies	"Audio Tool"
+			Features
+				[
+					{
+					Name		"Audio Jack"
+					Description "The sound is all around us"
+					DevTime		5
+					Level		2
+					CodeArt		0.75
+					Unlock 1985
+					Submarkets	[ 2; 3; 3 ]
+					}
+				]
+			}
+			
+			{
+			Name "Networking"
+			Spec Network
+			CodeArt 0.75
+			DevTime 3
+			Submarkets	[ 4; 1; 2 ]
+			Unlock 1985
+			Optional True
+			Features
+				[
+					{
+					Name	"Ethernet Port"
+					Description "Wires?"
+					DevTime 4
+					CodeArt 0.75
+					Level 1
+					Unlock 1999
+					Submarkets [ 5; 3; 2 ]
+					}
+					{
+					Name	"Bluetooth"
+					Description "Bluetooth on any device"
+					DevTime 4
+					CodeArt 0.9
+					Level 2
+					Submarkets [ 4; 3; 2 ]
+					}
+				]
+			}
+		]
+	}
