@@ -3,31 +3,31 @@ Conquer the electronics world, create your own phones and computers, build your 
 
 
 [![](https://imgur.com/poUJGm8.gif)](https://steamcommunity.com/sharedfiles/filedetails/?id=2205939739)
--CellPhone
--SmartPhone - Unlocks 1995
--Tablet - Unlocks 2000
--Smart Watch - Unlocks 2015
--Laptop
--2in1 Laptop - Unlocks 2010
--Computer
--Console
--VR Headset - Unlocks 2010
--Dongle - Unlocks 2005
--Speaker - Unlocks 2010
--Smart Speaker
--Headphones
--Earphones
--Monitor
--CPU
--GPU
--Motherboard
--Case
--RAM
--PSU
--CPU Cooling
--AIO CPU Cooling
--Hard Drive
--SSD - Unlocks 1990
+- CellPhone
+- SmartPhone - Unlocks 1995
+- Tablet - Unlocks 2000
+- Smart Watch - Unlocks 2015
+- Laptop
+- 2in1 Laptop - Unlocks 2010
+- Computer
+- Console
+- VR Headset - Unlocks 2010
+- Dongle - Unlocks 2005
+- Speaker - Unlocks 2010
+- Smart Speaker
+- Headphones
+- Earphones
+- Monitor
+- CPU
+- GPU
+- Motherboard
+- Case
+- RAM
+- PSU
+- CPU Cooling
+- AIO CPU Cooling
+- Hard Drive
+- SSD - Unlocks 1990
 
 ![Imgur](https://imgur.com/PvO7By1.png)
 ![Imgur](https://imgur.com/XpaMb1R.png)
