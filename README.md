@@ -1,6 +1,8 @@
 [![](https://imgur.com/hPHSjVK.gif)](https://steamcommunity.com/sharedfiles/filedetails/?id=2205939739)
 Conquer the electronics world, create your own phones and computers, build your very own electronic ecosystem and take over the market!
 
+For Alpha 11.7
+
 
 [![](https://imgur.com/poUJGm8.gif)](https://steamcommunity.com/sharedfiles/filedetails/?id=2205939739)
 - CellPhone
