@@ -16,21 +16,21 @@ SoftwareType
 						{
 						Name 				Physical Home Button
 						BuiltInThumbnail	N/A
-						Price				-50
+						Price				10
 						Time				2
-						DependsOn			"Home Button"
+						DependsOn			"Home button"
 						}
 						{
 						Name 				Audio Jack
 						BuiltInThumbnail	N/A
-						Price				-50
+						Price				10
 						Time				2
 						DependsOn			"Audio Jack"
 						}
 						{
 						Name 				Camera
 						BuiltInThumbnail	N/A
-						Price				100
+						Price				20
 						Time				4
 						DependsOn			"Main Camera"
 						}
@@ -41,58 +41,223 @@ SoftwareType
 						Time				3
 						DependsOn			"Torch"
 						}
-						{
-						Name 				Bluetooth
-						BuiltInThumbnail	N/A
-						Price				50
-						Time				3
-						DependsOn			"Bluetooth"
-						}
+						
 						{
 						Name 				MicroSD Slot
 						BuiltInThumbnail	N/A
-						Price				50
+						Price				25
 						Time				4
 						DependsOn			"MicroSD Slot"
 						}
 						{
 						Name 				NFC
 						BuiltInThumbnail	N/A
-						Price				75
+						Price				20
 						Time				4
 						DependsOn			"NFC"
 						}
 						{
 						Name 				Selfie Camera
 						BuiltInThumbnail	N/A
-						Price				75
+						Price				20
 						Time				5
 						DependsOn			"Selfie Camera"
 						}
 						{
 						Name 				USB-C
 						BuiltInThumbnail	N/A
-						Price				100
+						Price				25
 						Time				6
 						DependsOn			"USB-C"
 						}
+						{
+						Name 				Quick Charging
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"Quick Charging"
+						}
+						{
+						Name 				Infinity Display
+						BuiltInThumbnail	N/A
+						Price				40
+						Time				5
+						DependsOn			"Infinity Display"
+						}
+						{
+						Name 				Wireless Charging
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"Wireless Charging"
+						}
+						{
+						Name 				Bigger phone
+						BuiltInThumbnail	N/A
+						Price				35
+						Time				5
+						DependsOn			"Bigger phone"
+						}
+						{
+						Name 				Fingerprint Reader
+						BuiltInThumbnail	N/A
+						Price				30
+						Time				5
+						DependsOn			"Fingerprint Reader"
+						}
+						{
+						Name 				Stylus
+						BuiltInThumbnail	N/A
+						Price				40
+						Time				4
+						DependsOn			"Stylus"
+						}
+						{
+						Name 				Super Thin
+						BuiltInThumbnail	N/A
+						Price				35
+						Time				6
+						DependsOn			"Super Thin"
+						}
+						{
+						Name 				Folding Phone
+						BuiltInThumbnail	N/A
+						Price				50
+						Time				8
+						DependsOn			"Folding Phone"
+						}
+						
+						{
+						Name 				Surround sound
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"Surround sound"
+						}
+						
+						{
+						Name 				Protective Screen
+						BuiltInThumbnail	N/A
+						Price				35
+						Time				3
+						DependsOn			"Protective Screen"
+						}
+						{
+						Name 				Amoled Capability
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"Amoled Capability"
+						}
+						{
+						Name 				4k Support
+						BuiltInThumbnail	N/A
+						Price				30
+						Time				5
+						DependsOn			"4k Support"
+						}
+						{
+						Name 				120hz Support
+						BuiltInThumbnail	N/A
+						Price				40
+						Time				6
+						DependsOn			"120hz Support"
+						}
+						{
+						Name 				Holographic Support
+						BuiltInThumbnail	N/A
+						Price				60
+						Time				8
+						DependsOn			"Holographic Support"
+						}
+						
+						{
+						Name 				2G Capable
+						BuiltInThumbnail	N/A
+						Price				5
+						Time				4
+						DependsOn			"2G Capable"
+						}
+						{
+						Name 				3G Capable
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				4
+						DependsOn			"3G Capable"
+						}
+						
+						{
+						Name 				4G Capable
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						DependsOn			"4G Capable"
+						}
+						{
+						Name 				5G Capable
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"5G Capable"
+						}
+						{
+						Name 				6G Capable
+						BuiltInThumbnail	N/A
+						Price				35
+						Time				4
+						DependsOn			"6G Capable"
+						}
+						
+						{
+						Name 				System
+						BuiltInThumbnail	N/A
+						Price				100
+						Time				8
+						}
+						{
+						Name 				Audio
+						BuiltInThumbnail	N/A
+						Price				50
+						Time				6
+						}
+						{
+						Name 				Screen
+						BuiltInThumbnail	N/A
+						Price				100
+						Time				7
+						}
+						{
+						Name 				Networking
+						BuiltInThumbnail	N/A
+						Price				100
+						Time				6
+						}
+						
 					]
 				Processes
 					[
 						{
-						Inputs	[ "Gyroscope"; "Rumble unit"; "Plastic" ]
-						Output	Joystick
+						Inputs	[ "Physical Home Button"; "Audio Jack"; "Camera" ; "Torch" ; "MicroSD Slot" ; "NFC"; "Selfie Camera"; "USB-C"; "Quick Charging"; "Infinity Display"; "Wireless Charging"; "Bigger phone"; "Fingerprint Reader"; "Stylus"; "Super Thin"; "Folding Phone" ]
+						Output	System
 						}
 						{
-						Inputs	[ "Board"; "Drive bay"; "Controller" ]
-						Output	Console
+						Inputs	[ "Surround sound" ]
+						Output	Audio
 						}
 						{
-						Inputs	[ "Joystick"; "Console" ]
+						Inputs	[ "Protective Screen"; "Amoled Capability"; "4k Support"; "120hz Support"; "Holographic Support" ]
+						Output	Screen
+						}
+						{
+						Inputs	[ "2G Capable"; "3G Capable"; "4G Capable"; "5G Capable"; "6G Capable" ]
+						Output	Networking
+						}
+						{
+						Inputs	[ "System"; "Audio"; "Screen"; "Networking" ]
 						Output	Final
 						}
 					]
-				FinalTime	4
+				FinalTime	8
 				}
 	Categories
 		[
@@ -127,9 +292,9 @@ SoftwareType
 			{
 			Name		Hardware
 			Spec		Hardware
-			DevTime		3
+			DevTime		2
 			CodeArt		1
-			Submarkets	[ 3; 1; 2 ]
+			Submarkets	[ 1; 1; 1 ]
 			Features
 				[
 					{
@@ -165,15 +330,7 @@ SoftwareType
 					Level 1
 					Submarkets [ 1; 1; 3 ]
 					}
-					{
-					Name	"Bluetooth"
-					Description "If you have a blue tooth you should get it checked out"
-					DevTime 2
-					CodeArt 1
-					Unlock 1999
-					Level 1
-					Submarkets [ 3; 1; 2 ]
-					}
+					
 					{
 					Name	"MicroSD Slot"
 					Description "Expand the storage"
@@ -264,15 +421,7 @@ SoftwareType
 					Unlock 2010
 					Submarkets [ 4; 3; 5 ]
 					}
-					{
-					Name	"Facial Recognition"
-					Description "I know what you look like"
-					DevTime 6
-					CodeArt 0.9
-					Level 3
-					Unlock 2010
-					Submarkets [ 3; 6; 1 ]
-					}
+					
 					{
 					Name	"Super Thin"
 					Dependencies "Dongle"
@@ -292,30 +441,8 @@ SoftwareType
 					Unlock 2018
 					Submarkets [ 2; 4; 5 ]
 					}
-					{
-					Name		"Bit mining"
-					Description	"Mine bitcoin using your users' GPU to make an extra {Currency:0.1} per active user, at the risk of getting caught"
-					Server		0.0003
-					DevTime		6
-					Level		3
-					CodeArt		1
-					Submarkets	0
-					Script_EndOfDay
-					"if (Product.GetVar(\"Bitmining\", true))//Check if player has been caught
-						{
-						var extra = Product.Userbase * 0.1;//Calculate extra income
-						Product.DevCompany.MakeTransaction(extra, Sales, \"Datamining\");//Add money
-						Product.AddToCashflow(0, 0, 0, extra, 0, Time);//Add to product income chart
-						if (Random() * Product.Userbase > 400000)//Random chance of getting caught
-							{
-								LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
-								Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
-								Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
-								Product.KillAwareness();//Remove all marketing
-								Product.PutVar(\"Bitmining\", false);//Mark player as caught for this product
-							}
-						}"
-					}
+					
+					
 					{
 					Name		"Surround sound"
 					Description "The sound is all around us"
@@ -325,37 +452,8 @@ SoftwareType
 					Unlock 1985
 					Submarkets	[ 1; 1; 3 ]
 					}
-					{
-					Name		"Speech recognition"
-					Description "Ok Noogle"
-					DevTime		5
-					Level		2
-					CodeArt		0.9
-					Unlock 1990
-					Submarkets	[ 3; 0; 1 ]
-					}
-					{
-					Name		"Microphone surveillance"
-					Description "Listen in on your users' conversations to find and fix bugs before they are reported, at the risk of getting caught"
-					Server		0.0003
-					DevTime		3
-					Level		3
-					CodeArt		1
-					Submarkets	0
-					Script_EndOfDay
-					"if (Product.GetVar(\"MicMining\", true))//Check if player has been caught
-						{
-						Product.Bugs = Max(0, Product.Bugs - Product.Userbase * 0.01);//Remove 1 bug from product for each 100th active user
-						if (Random() * Product.Userbase > 1000000 * Product.Category.Popularity)//Random chance of getting caught
-							{
-							LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
-							Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
-							Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
-							Product.KillAwareness();//Remove all marketing
-							Product.PutVar(\"MicMining\", false);//Mark player as caught for this product
-							}
-						}"
-					}
+					
+					
 					{
 					Name	"Protective Screen"
 					Description "Prevents easy breaking"
@@ -373,15 +471,7 @@ SoftwareType
 					Unlock 2007
 					Submarkets [ 2; 0; 4 ]
 					}
-					{
-					Name	"HDR Support"
-					Description "Give your pics higher dynamic range"
-					DevTime 4
-					CodeArt 0.25
-					Level 2
-					Unlock 1999
-					Submarkets [ 1; 1; 4 ]
-					}
+					
 					{
 					Name	"4k Support"
 					Description "4 times as many k's"
@@ -409,6 +499,7 @@ SoftwareType
 					Unlock 2025
 					Submarkets [ 0; 0; 4 ]
 					}
+					
 					{
 					Name	"2G Capable"
 					Description "I Two have Gs"
@@ -429,25 +520,8 @@ SoftwareType
 					Submarkets [ 3; 1; 2 ]
 					Server		0.0002
 					}
-					{
-					Name	"Wifi"
-					Description "But why fi?"
-					DevTime 4
-					CodeArt 0.75
-					Level 1
-					Unlock 1999
-					Submarkets [ 4; 1; 2 ]
-					Server		0.0002
-					}
-					{
-					Name	"GPS"
-					Description "We know where you are"
-					DevTime 3
-					CodeArt .9
-					Level 2
-					Unlock 1999
-					Submarkets [ 2; 4; 1 ]
-					}
+					
+					
 					{
 					Name	"4G Capable"
 					Description "Four the internet"
@@ -478,7 +552,130 @@ SoftwareType
 					Submarkets [ 5; 1; 2 ]
 					Server		0.0002
 					}
-					
 				]
+			}
+			{
+			Name "System"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 0; 0; 0 ]
+			Optional False
+			Features
+				[
+					{
+					Name	"Bluetooth"
+					Description "If you have a blue tooth you should get it checked out"
+					DevTime 2
+					CodeArt 1
+					Unlock 1999
+					Level 1
+					Submarkets [ 3; 1; 2 ]
+					}
+					{
+					Name	"Facial Recognition"
+					Description "I know what you look like"
+					DevTime 6
+					CodeArt 0.9
+					Level 3
+					Unlock 2010
+					Submarkets [ 3; 6; 1 ]
+					}
+					{
+					Name		"Speech recognition"
+					Description "Ok Noogle"
+					DevTime		5
+					Level		2
+					CodeArt		0.9
+					Unlock 1990
+					Submarkets	[ 3; 0; 1 ]
+					}
+					{
+					Name	"GPS"
+					Description "We know where you are"
+					DevTime 3
+					CodeArt .9
+					Level 2
+					Unlock 1999
+					Submarkets [ 2; 4; 1 ]
+					}
+					{
+					Name	"Wifi"
+					Description "But why fi?"
+					DevTime 4
+					CodeArt 0.75
+					Level 1
+					Unlock 1999
+					Submarkets [ 4; 1; 2 ]
+					Server		0.0002
+					}
+					{
+					Name	"HDR Support"
+					Description "Give your pics higher dynamic range"
+					DevTime 4
+					CodeArt 0.25
+					Level 2
+					Unlock 1999
+					Submarkets [ 1; 1; 4 ]
+					}
+				]
+			}
+			{
+			Name "Illegal Software"
+			Spec Network
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 0; 0; 0 ]
+			Optional False
+			Features
+				[
+					{
+					Name		"Bit mining"
+					Description	"Mine bitcoin using your users' GPU to make an extra {Currency:0.1} per active user, at the risk of getting caught"
+					Server		0.0003
+					DevTime		6
+					Level		3
+					CodeArt		1
+					Submarkets	0
+					Script_EndOfDay
+					"if (Product.GetVar(\"Bitmining\", true))//Check if player has been caught
+						{
+						var extra = Product.Userbase * 0.1;//Calculate extra income
+						Product.DevCompany.MakeTransaction(extra, Sales, \"Datamining\");//Add money
+						Product.AddToCashflow(0, 0, 0, extra, 0, Time);//Add to product income chart
+						if (Random() * Product.Userbase > 400000)//Random chance of getting caught
+							{
+								LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
+								Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
+								Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
+								Product.KillAwareness();//Remove all marketing
+								Product.PutVar(\"Bitmining\", false);//Mark player as caught for this product
+							}
+						}"
+					}
+					{
+					Name		"Microphone surveillance"
+					Description "Listen in on your users' conversations to find and fix bugs before they are reported, at the risk of getting caught"
+					Server		0.0003
+					DevTime		3
+					Level		3
+					CodeArt		1
+					Submarkets	0
+					Script_EndOfDay
+					"if (Product.GetVar(\"MicMining\", true))//Check if player has been caught
+						{
+						Product.Bugs = Max(0, Product.Bugs - Product.Userbase * 0.01);//Remove 1 bug from product for each 100th active user
+						if (Random() * Product.Userbase > 1000000 * Product.Category.Popularity)//Random chance of getting caught
+							{
+							LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
+							Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
+							Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
+							Product.KillAwareness();//Remove all marketing
+							Product.PutVar(\"MicMining\", false);//Mark player as caught for this product
+							}
+						}"
+					}
+				]
+			}
 		]
 	}
