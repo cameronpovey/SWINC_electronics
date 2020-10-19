@@ -9,6 +9,200 @@ SoftwareType
 	OptimalDevTime 	60
 	SubmarketNames	[ Speed; Security; Design ]
 	Unlock 2000
+	Hardware	True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name 				Physical Home Button
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				2
+						DependsOn			"Home button"
+						}
+						{
+						Name 				Audio Jack
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				2
+						DependsOn			"Audio Jack"
+						}
+						{
+						Name 				Main Camera
+						BuiltInThumbnail	N/A
+						Price				30
+						Time				2
+						DependsOn			"Main Camera"
+						}
+						{
+						Name 				Bluetooth
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				2
+						DependsOn			"Bluetooth"
+						}
+						{
+						Name 				MicroSD Slot
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				3
+						DependsOn			"MicroSD Slot"
+						}
+						{
+						Name 				Selfie Camera
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"Selfie Camera"
+						}
+						{
+						Name 				USB-C
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				3
+						DependsOn			"USB-C"
+						}
+						{
+						Name 				Quick Charging
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				2
+						DependsOn			"Quick Charging"
+						}
+						{
+						Name 				Fingerprint Reader
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				3
+						DependsOn			"Fingerprint Reader"
+						}
+						{
+						Name 				Stylus
+						BuiltInThumbnail	N/A
+						Price				35
+						Time				4
+						DependsOn			"Stylus"
+						}
+						{
+						Name 				Super Thin
+						BuiltInThumbnail	N/A
+						Price				30
+						Time				5
+						DependsOn			"Super Thin"
+						}
+						{
+						Name 				Surround sound
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				3
+						DependsOn			"Surround sound"
+						}
+						{
+						Name 				Protective Screen
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"Protective Screen"
+						}
+						{
+						Name 				Amoled
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				3
+						DependsOn			"Amoled"
+						}
+						{
+						Name 				HDR Support
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"HDR Support"
+						}
+						{
+						Name 				4k Screen
+						BuiltInThumbnail	N/A
+						Price				35
+						Time				5
+						DependsOn			"4k Screen"
+						}
+						{
+						Name 				120hz Support
+						BuiltInThumbnail	N/A
+						Price				35
+						Time				5
+						DependsOn			"120hz Support"
+						}
+						{
+						Name 				Holographic Display
+						BuiltInThumbnail	N/A
+						Price				50
+						Time				6
+						DependsOn			"Holographic Display"
+						}
+						{
+						Name 				Wifi
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				2
+						DependsOn			"Wifi"
+						}
+						{
+						Name 				GPS
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				2
+						DependsOn			"GPS"
+						}
+						{
+						Name 				LTE Capable
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"LTE Capable"
+						}
+						
+						{
+						Name 				Audio
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				6
+						}
+						{
+						Name 				Screen
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				7
+						}
+						{
+						Name 				Networking
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				6
+						}
+						
+					]
+				Processes
+					[
+						{
+						Inputs	[ "Surround sound" ]
+						Output	Audio
+						}
+						{
+						Inputs	[ "Protective Screen"; "Amoled"; "4k Screen"; "120hz Support"; "Holographic Display" ]
+						Output	Screen
+						}
+						{
+						Inputs	[ "Wifi"; "GPS"; "LTE Capable" ]
+						Output	Networking
+						}
+						{
+						Inputs	[ "Physical Home Button"; "Audio Jack"; "Main Camera" ; "Bluetooth" ; "MicroSD Slot" ; "Selfie Camera"; "USB-C"; "Quick Charging"; "Fingerprint Reader"; "Stylus"; "Super Thin"; "Audio"; "Screen"; "Networking" ]
+						Output	Final
+						}
+					]
+				FinalTime	8
+				}
 	Categories
 		[
 			{
@@ -26,17 +220,16 @@ SoftwareType
 	Features
 		[
 			{
-			Name "System"
-			Spec System
-			Dependencies	["CPU"; "Motherboard"; "RAM"; "PSU"; "CPU Cooling"; "Storage"; "Speaker"]
-			CodeArt 1
-			DevTime 3
-			Submarkets	[ 3; 1; 2 ]
+			Name		Hardware
+			Spec		Hardware
+			DevTime		2
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
 			Features
 				[
 					{
 					Name	"Home button"
-					Description "ET phone home button"
+					Description "E.T. phone home button"
 					DevTime 1
 					CodeArt 0.5
 					Level 1
@@ -52,7 +245,7 @@ SoftwareType
 					}
 					{
 					Name	"Main Camera"
-					Description "The big camera on the back aka camera tablet"
+					Description "The big camera on the back. Aka camera tablet"
 					DevTime 3
 					CodeArt 0.5
 					Unlock 2000
@@ -123,15 +316,6 @@ SoftwareType
 					Submarkets [ 4; 3; 5 ]
 					}
 					{
-					Name	"Facial Recognition"
-					Description "I know what you look like"
-					DevTime 6
-					CodeArt 0.9
-					Level 3
-					Unlock 2010
-					Submarkets [ 3; 6; 1 ]
-					}
-					{
 					Name	"Super Thin"
 					Dependencies "Dongle"
 					Description "So thin it removes the ports - Needs dongle to operate"
@@ -142,51 +326,6 @@ SoftwareType
 					Submarkets [ 3; 5; 3 ]
 					}
 					{
-					Name	"Desktop Experience"
-					Description "Turns your tablet into a virtual desktop. Is it a computer? Is it a Tablet?"
-					DevTime 8
-					CodeArt 0.8
-					Level 3
-					Unlock 2015
-					Submarkets [ 7; 3; 4 ]
-					}
-					{
-					Name		"Bit mining"
-					Description	"Mine bitcoin using your users' GPU to make an extra {Currency:0.1} per active user, at the risk of getting caught"
-					Server		0.0003
-					DevTime		6
-					Level		3
-					CodeArt		1
-					Submarkets	0
-					Script_EndOfDay
-					"if (Product.GetVar(\"Bitmining\", true))//Check if player has been caught
-						{
-						var extra = Product.Userbase * 0.1;//Calculate extra income
-						Product.DevCompany.MakeTransaction(extra, Sales, \"Datamining\");//Add money
-						Product.AddToCashflow(0, 0, 0, extra, 0, Time);//Add to product income chart
-						if (Random() * Product.Userbase > 400000)//Random chance of getting caught
-							{
-								LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
-								Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
-								Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
-								Product.KillAwareness();//Remove all marketing
-								Product.PutVar(\"Bitmining\", false);//Mark player as caught for this product
-							}
-						}"
-					}
-				]
-			}
-	
-			{
-			Name		Audio
-			Spec		Audio
-			DevTime		6
-			CodeArt		1
-			Submarkets	[ 1; 0; 1 ]
-			Dependencies	"Audio Tool"
-			Features
-				[
-					{
 					Name		"Surround sound"
 					Description "The sound is all around us"
 					DevTime		5
@@ -195,49 +334,6 @@ SoftwareType
 					Unlock 1985
 					Submarkets	[ 1; 1; 3 ]
 					}
-					{
-					Name		"Speech recognition"
-					Description "Ok Noogle"
-					DevTime		5
-					Level		2
-					CodeArt		0.9
-					Unlock 1990
-					Submarkets	[ 3; 0; 1 ]
-					}
-					{
-					Name		"Microphone surveillance"
-					Description "Listen in on your users' conversations to find and fix bugs before they are reported, at the risk of getting caught"
-					Server		0.0003
-					DevTime		3
-					Level		3
-					CodeArt		1
-					Submarkets	0
-					Script_EndOfDay
-					"if (Product.GetVar(\"MicMining\", true))//Check if player has been caught
-						{
-						Product.Bugs = Max(0, Product.Bugs - Product.Userbase * 0.01);//Remove 1 bug from product for each 100th active user
-						if (Random() * Product.Userbase > 1000000 * Product.Category.Popularity)//Random chance of getting caught
-							{
-							LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
-							Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
-							Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
-							Product.KillAwareness();//Remove all marketing
-							Product.PutVar(\"MicMining\", false);//Mark player as caught for this product
-							}
-						}"
-					}
-				]
-			}
-	
-			{
-			Name "Screen"
-			Spec 2D
-			CodeArt 0.5
-			DevTime 4
-			Submarkets	[ 1; 3; 4 ]
-			Dependencies	["2D Editor"; "Monitor"]
-			Features
-				[
 					{
 					Name	"Protective Screen"
 					Description "Prevents easy breaking"
@@ -274,6 +370,15 @@ SoftwareType
 					Submarkets [ 1; 1; 4 ]
 					}
 					{
+					Name	"120hz Support"
+					Description "Ouch,it hertz"
+					DevTime 5
+					CodeArt 0.5
+					Level 3
+					Unlock 2015
+					Submarkets [ 6; 2; 2 ]
+					}
+					{
 					Name	"Holographic Display"
 					Description "Help me obi-one, you're my only hope"
 					DevTime 8
@@ -282,32 +387,6 @@ SoftwareType
 					Unlock 2025
 					Submarkets [ 4; 1; 4 ]
 					}
-				]
-			}
-	
-			{
-			Name "3D Rendering"
-			Spec 3D
-			CodeArt 0.1
-			DevTime 8
-			Submarkets	[ 1; 3; 5 ]
-			Unlock 1990
-			Optional True
-			Dependencies	"3D Editor"
-			Features
-				[]
-			}
-			
-			{
-			Name "Networking"
-			Spec Network
-			CodeArt 0.75
-			DevTime 3
-			Submarkets	[ 4; 1; 2 ]
-			Unlock 1985
-			Optional True
-			Features
-				[
 					{
 					Name	"Wifi"
 					Description "But why fi?"
@@ -336,6 +415,101 @@ SoftwareType
 					Unlock 2005
 					Submarkets [ 4; 1; 2 ]
 					Server		0.0002
+					}
+				]
+			}
+			{
+			Name "System"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 0; 0; 0 ]
+			Optional False
+			Features
+				[
+					{
+					Name		"Speech recognition"
+					Description "Ok Noogle"
+					DevTime		5
+					Level		2
+					CodeArt		0.9
+					Unlock 1990
+					Submarkets	[ 3; 0; 1 ]
+					}
+					{
+					Name	"Facial Recognition"
+					Description "I know what you look like"
+					DevTime 6
+					CodeArt 0.9
+					Level 3
+					Unlock 2010
+					Submarkets [ 3; 6; 1 ]
+					}
+					{
+					Name	"Desktop Experience"
+					Description "Turns your tablet into a virtual desktop. Is it a computer? Is it a Tablet?"
+					DevTime 8
+					CodeArt 0.8
+					Level 3
+					Unlock 2015
+					Submarkets [ 7; 3; 4 ]
+					}
+				]
+			}
+			{
+			Name "Illegal Software"
+			Spec Network
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 0; 0; 0 ]
+			Optional False
+			Features
+				[
+					{
+					Name		"Bit mining"
+					Description	"Mine bitcoin using your users' GPU to make an extra {Currency:0.1} per active user, at the risk of getting caught"
+					Server		0.0003
+					DevTime		6
+					Level		3
+					CodeArt		1
+					Submarkets	0
+					Script_EndOfDay
+					"if (Product.GetVar(\"Bitmining\", true))//Check if player has been caught
+						{
+						var extra = Product.Userbase * 0.1;//Calculate extra income
+						Product.DevCompany.MakeTransaction(extra, Sales, \"Datamining\");//Add money
+						Product.AddToCashflow(0, 0, 0, extra, 0, Time);//Add to product income chart
+						if (Random() * Product.Userbase > 400000)//Random chance of getting caught
+							{
+								LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
+								Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
+								Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
+								Product.KillAwareness();//Remove all marketing
+								Product.PutVar(\"Bitmining\", false);//Mark player as caught for this product
+							}
+						}"
+					}
+					{
+					Name		"Microphone surveillance"
+					Description "Listen in on your users' conversations to find and fix bugs before they are reported, at the risk of getting caught"
+					Server		0.0003
+					DevTime		3
+					Level		3
+					CodeArt		1
+					Submarkets	0
+					Script_EndOfDay
+					"if (Product.GetVar(\"MicMining\", true))//Check if player has been caught
+						{
+						Product.Bugs = Max(0, Product.Bugs - Product.Userbase * 0.01);//Remove 1 bug from product for each 100th active user
+						if (Random() * Product.Userbase > 1000000 * Product.Category.Popularity)//Random chance of getting caught
+							{
+							LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
+							Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
+							Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
+							Product.KillAwareness();//Remove all marketing
+							Product.PutVar(\"MicMining\", false);//Mark player as caught for this product
+							}
+						}"
 					}
 				]
 			}
