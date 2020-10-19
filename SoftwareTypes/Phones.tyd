@@ -209,37 +209,28 @@ SoftwareType
 						}
 						
 						{
-						Name 				System
-						BuiltInThumbnail	N/A
-						Price				100
-						Time				8
-						}
-						{
 						Name 				Audio
 						BuiltInThumbnail	N/A
-						Price				50
+						Price				25
 						Time				6
 						}
 						{
 						Name 				Screen
 						BuiltInThumbnail	N/A
-						Price				100
+						Price				25
 						Time				7
 						}
 						{
 						Name 				Networking
 						BuiltInThumbnail	N/A
-						Price				100
+						Price				25
 						Time				6
 						}
 						
 					]
 				Processes
 					[
-						{
-						Inputs	[ "Physical Home Button"; "Audio Jack"; "Camera" ; "Torch" ; "MicroSD Slot" ; "NFC"; "Selfie Camera"; "USB-C"; "Quick Charging"; "Infinity Display"; "Wireless Charging"; "Bigger phone"; "Fingerprint Reader"; "Stylus"; "Super Thin"; "Folding Phone" ]
-						Output	System
-						}
+						
 						{
 						Inputs	[ "Surround sound" ]
 						Output	Audio
@@ -253,7 +244,7 @@ SoftwareType
 						Output	Networking
 						}
 						{
-						Inputs	[ "System"; "Audio"; "Screen"; "Networking" ]
+						Inputs	[ "Physical Home Button"; "Audio Jack"; "Camera" ; "Torch" ; "MicroSD Slot" ; "NFC"; "Selfie Camera"; "USB-C"; "Quick Charging"; "Infinity Display"; "Wireless Charging"; "Bigger phone"; "Fingerprint Reader"; "Stylus"; "Super Thin"; "Folding Phone"; "Audio"; "Screen"; "Networking" ]
 						Output	Final
 						}
 					]
