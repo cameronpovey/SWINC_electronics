@@ -16,131 +16,131 @@ SoftwareType
 				{
 				Name 				"Buttons"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				5
+				Time				2
 				DependsOn			"Buttons"
 				}
 				{
 				Name 				"Heartrate sensor"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				15
+				Time				2
 				DependsOn			"Heartrate sensor"
 				}
 				{
 				Name 				"Water Resistant"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				5
+				Time				2
 				DependsOn			"Water Resistant"
 				}
 				{
 				Name 				"NFC"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				10
+				Time				2
 				DependsOn			"NFC"
 				}
 				{
-				Name 				"Interchangable Straps"
+				Name 				"Straps"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				5
+				Time				2
 				DependsOn			"Interchangable Straps"
 				}
 				{
 				Name 				"Wireless Charging"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				10
+				Time				2
 				DependsOn			"Wireless Charging"
 				}
 				{
 				Name 				"Speaker"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				5
+				Time				4
 				}
 				{
 				Name 				"Surround Sound"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				10
+				Time				4
 				DependsOn			"Surround Sound"
 				}
 				{
 				Name 				"Protective Screen"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				10
+				Time				4
 				DependsOn			"Protective Screen"
 				}
 				{
 				Name 				"Amoled"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				15
+				Time				4
 				DependsOn			"Amoled"
 				}
 				{
 				Name 				"Holographic Display"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				20
+				Time				8
 				DependsOn			"Holographic Display"
 				}
 				{
 				Name 				"Wifi"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				5
+				Time				2
 				DependsOn			"Wifi"
 				}
 				{
 				Name 				"GPS"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				10
+				Time				4
 				DependsOn			"GPS"
 				}
 				{
 				Name 				"LTE Capable"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				10
+				Time				4
 				DependsOn			"LTE Capable"
 				}
 
 				{
 				Name 				"System"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				20
+				Time				8
 				}
 				{
 				Name 				"Audio"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				5
+				Time				4
 				}
 				{
 				Name 				"Screen"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				15
+				Time				4
 				}
 				{
 				Name 				"Networking"
 				BuiltInThumbnail	N/A
-				Price				0
-				Time				0
+				Price				10
+				Time				4
 				}
 
 			]
 		Processes
 			[
 				{
-				Inputs	[  "Buttons"; "Heartrate sensor"; "Water Resistant"; "Interchangable Straps"; "Wireless Charging" ]
+				Inputs	[  "Buttons"; "Heartrate sensor"; "Water Resistant"; "Straps"; "Wireless Charging" ]
 				Output	System
 				}
 				{
@@ -160,7 +160,7 @@ SoftwareType
 				Output	Final
 				}
 			]
-		FinalTime	0
+		FinalTime	8
 		}
 	Categories
 		[
