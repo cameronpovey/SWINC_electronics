@@ -46,35 +46,35 @@ SoftwareType
 						Name 				MicroSD Slot
 						BuiltInThumbnail	N/A
 						Price				15
-						Time				3
+						Time				2
 						DependsOn			"MicroSD Slot"
 						}
 						{
 						Name 				Selfie Camera
 						BuiltInThumbnail	N/A
 						Price				20
-						Time				4
+						Time				2
 						DependsOn			"Selfie Camera"
 						}
 						{
 						Name 				USB-C
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				3
+						Time				4
 						DependsOn			"USB-C"
 						}
 						{
 						Name 				Quick Charging
 						BuiltInThumbnail	N/A
 						Price				20
-						Time				2
+						Time				4
 						DependsOn			"Quick Charging"
 						}
 						{
 						Name 				Fingerprint Reader
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				3
+						Time				4
 						DependsOn			"Fingerprint Reader"
 						}
 						{
@@ -88,28 +88,28 @@ SoftwareType
 						Name 				Super Thin
 						BuiltInThumbnail	N/A
 						Price				30
-						Time				5
+						Time				4
 						DependsOn			"Super Thin"
 						}
 						{
 						Name 				Surround sound
 						BuiltInThumbnail	N/A
 						Price				20
-						Time				3
+						Time				4
 						DependsOn			"Surround sound"
 						}
 						{
 						Name 				Protective Screen
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				4
+						Time				2
 						DependsOn			"Protective Screen"
 						}
 						{
 						Name 				Amoled
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				3
+						Time				4
 						DependsOn			"Amoled"
 						}
 						{
@@ -123,14 +123,14 @@ SoftwareType
 						Name 				4k Screen
 						BuiltInThumbnail	N/A
 						Price				35
-						Time				5
+						Time				4
 						DependsOn			"4k Screen"
 						}
 						{
 						Name 				120hz Support
 						BuiltInThumbnail	N/A
 						Price				35
-						Time				5
+						Time				4
 						DependsOn			"120hz Support"
 						}
 						{
@@ -144,14 +144,14 @@ SoftwareType
 						Name 				Wifi
 						BuiltInThumbnail	N/A
 						Price				15
-						Time				2
+						Time				4
 						DependsOn			"Wifi"
 						}
 						{
 						Name 				GPS
 						BuiltInThumbnail	N/A
 						Price				15
-						Time				2
+						Time				4
 						DependsOn			"GPS"
 						}
 						{
@@ -166,19 +166,19 @@ SoftwareType
 						Name 				Audio
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				6
+						Time				4
 						}
 						{
 						Name 				Screen
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				7
+						Time				4
 						}
 						{
 						Name 				Networking
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				6
+						Time				4
 						}
 						
 					]
@@ -201,7 +201,7 @@ SoftwareType
 						Output	Final
 						}
 					]
-				FinalTime	8
+				FinalTime	4
 				}
 	Categories
 		[
