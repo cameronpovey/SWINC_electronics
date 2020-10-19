@@ -9,11 +9,177 @@ SoftwareType
 	OptimalDevTime 	60
 	NameGenerator Laptops
 	SubmarketNames	[ Speed; Security; Design ]
+	Hardware	True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name 				Trackpad
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				3
+						DependsOn			"Trackpad"
+						}
+						{
+						Name 				Bluetooth
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				2
+						DependsOn			"Bluetooth"
+						}
+						{
+						Name 				Webcam
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				2
+						DependsOn			"Webcam"
+						}
+						{
+						Name 				USB-C Compatability
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"USB-C Compatability"
+						}
+						{
+						Name 				Fingerprint Reader
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				3
+						DependsOn			"Fingerprint Reader"
+						}
+						{
+						Name 				Stylus
+						BuiltInThumbnail	N/A
+						Price				30
+						Time				4
+						DependsOn			"Stylus"
+						}
+						{
+						Name 				RGB
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"RGB"
+						}
+						{
+						Name 				Super Thin
+						BuiltInThumbnail	N/A
+						Price				35
+						Time				3
+						DependsOn			"Super Thin"
+						}
+						{
+						Name 				Gaming
+						BuiltInThumbnail	N/A
+						Price				40
+						Time				5
+						DependsOn			"Gaming"
+						}
+						{
+						Name 				Surround sound
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				3
+						DependsOn			"Surround sound"
+						}
+						{
+						Name 				Amoled
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"Amoled"
+						}
+						{
+						Name 				HDR Support
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				3
+						DependsOn			"HDR Support"
+						}
+						{
+						Name 				4k Screen
+						BuiltInThumbnail	N/A
+						Price				35
+						Time				4
+						DependsOn			"4k Screen"
+						}
+						{
+						Name 				120hz Support
+						BuiltInThumbnail	N/A
+						Price				35
+						Time				4
+						DependsOn			"120hz Support"
+						}
+						{
+						Name 				Holographic Display
+						BuiltInThumbnail	N/A
+						Price				50
+						Time				6
+						DependsOn			"Holographic Display"
+						}
+						{
+						Name 				Wifi
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				3
+						DependsOn			"Wifi"
+						}
+						{
+						Name 				Built in VPN
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				3
+						DependsOn			"Built in VPN"
+						}
+						
+						{
+						Name 				Audio
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				6
+						}
+						{
+						Name 				Screen
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				7
+						}
+						{
+						Name 				Networking
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				6
+						}
+					]
+				Processes
+					[
+						
+						{
+						Inputs	[ "Surround sound" ]
+						Output	Audio
+						}
+						{
+						Inputs	[ "Amoled"; "HDR Support"; "4k Screen"; "120hz Support"; "Holographic Display" ]
+						Output	Screen
+						}
+						{
+						Inputs	[ "Wifi"; "Built in VPN" ]
+						Output	Networking
+						}
+						{
+						Inputs	[ "Trackpad"; "Bluetooth"; "Webcam" ; "USB-C Compatability" ; "Fingerprint Reader" ; "Stylus"; "RGB"; "Super Thin"; "Gaming"; "Audio"; "Screen"; "Networking" ]
+						Output	Final
+						}
+					]
+				FinalTime	8
+				}
 	Categories
 		[
 			{
 			Name "Default"
-			Popularity 0.2
+			Popularity 0.1
 			IdealPrice 600
 			Submarkets [5; 4; 2]
 			Retention 48
@@ -24,7 +190,7 @@ SoftwareType
 			{
 			Name "2 in 1"
 			Description "Switch between laptop and tablet with ease"
-			Popularity 0.1
+			Popularity 0.025
 			IdealPrice 800
 			Submarkets [4; 3; 3]
 			Retention 46
@@ -37,12 +203,11 @@ SoftwareType
 	Features
 		[
 			{
-			Name "System"
-			Spec System
-			Dependencies	["CPU"; "Motherboard"; "RAM"; "PSU"; "CPU Cooling"; "Storage"; "Speaker"; "Case"]
-			CodeArt 1
-			DevTime 3
-			Submarkets	[ 3; 1; 2 ]
+			Name		Hardware
+			Spec		Hardware
+			DevTime		2
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
 			Features
 				[
 					{
@@ -108,15 +273,6 @@ SoftwareType
 					Submarkets [ 2; 2; 3 ]
 					}
 					{
-					Name	"Facial Recognition"
-					Description "Wundoos hello"
-					DevTime 6
-					CodeArt 0.9
-					Level 3
-					Unlock 2010
-					Submarkets [ 3; 6; 1 ]
-					}
-					{
 					Name	"Super Thin"
 					Dependencies "Dongle"
 					Description "So thin it removes the ports - Needs dongle to operate"
@@ -136,42 +292,7 @@ SoftwareType
 					Unlock 2005
 					Submarkets [ 6; 3; 4 ]
 					}
-					{
-					Name		"Bit mining"
-					Description	"Mine bitcoin using your users' GPU to make an extra {Currency:0.1} per active user, at the risk of getting caught"
-					Server		0.0003
-					DevTime		6
-					Level		3
-					CodeArt		1
-					Submarkets	0
-					Script_EndOfDay
-					"if (Product.GetVar(\"Bitmining\", true))//Check if player has been caught
-						{
-						var extra = Product.Userbase * 0.1;//Calculate extra income
-						Product.DevCompany.MakeTransaction(extra, Sales, \"Datamining\");//Add money
-						Product.AddToCashflow(0, 0, 0, extra, 0, Time);//Add to product income chart
-						if (Random() * Product.Userbase > 400000)//Random chance of getting caught
-							{
-								LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
-								Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
-								Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
-								Product.KillAwareness();//Remove all marketing
-								Product.PutVar(\"Bitmining\", false);//Mark player as caught for this product
-							}
-						}"
-					}
-				]
-			}
-	
-			{
-			Name		Audio
-			Spec		Audio
-			DevTime		6
-			CodeArt		1
-			Submarkets	[ 1; 0; 1 ]
-			Dependencies	"Audio Tool"
-			Features
-				[
+					
 					{
 					Name		"Surround sound"
 					Description "The sound is all around us"
@@ -181,50 +302,7 @@ SoftwareType
 					Unlock 1985
 					Submarkets	[ 1; 1; 3 ]
 					}
-					{
-					Name		"Speech recognition"
-					Description "Ok Noogle"
-					DevTime		5
-					Level		2
-					CodeArt		0.9
-					Unlock 1990
-					Submarkets	[ 3; 0; 1 ]
-					}
-					{
-					Name		"Microphone surveillance"
-					Description "Listen in on your users' conversations to find and fix bugs before they are reported, at the risk of getting caught"
-					Server		0.0003
-					DevTime		3
-					Level		3
-					CodeArt		1
-					Submarkets	0
-					Script_EndOfDay
-					"if (Product.GetVar(\"MicMining\", true))//Check if player has been caught
-						{
-						Product.Bugs = Max(0, Product.Bugs - Product.Userbase * 0.01);//Remove 1 bug from product for each 100th active user
-						if (Random() * Product.Userbase > 1000000 * Product.Category.Popularity)//Random chance of getting caught
-							{
-							LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
-							Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
-							Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
-							Product.KillAwareness();//Remove all marketing
-							Product.PutVar(\"MicMining\", false);//Mark player as caught for this product
-							}
-						}"
-					}
-				]
-			}
-	
-			{
-			Name "Screen"
-			Spec 2D
-			CodeArt 0.5
-			DevTime 4
-			Submarkets	[ 1; 3; 4 ]
-			Dependencies	["2D Editor"; "Monitor"]
-			Optional False
-			Features
-				[
+					
 					{
 					Name	"Amoled"
 					Description "Ohhhhhhh LED"
@@ -253,6 +331,15 @@ SoftwareType
 					Submarkets [ 1; 1; 4 ]
 					}
 					{
+					Name	"120hz Support"
+					Description "Ouch,it hertz"
+					DevTime 5
+					CodeArt 0.5
+					Level 3
+					Unlock 2015
+					Submarkets [ 6; 2; 2 ]
+					}
+					{
 					Name	"Holographic Display"
 					Description "Help me obi-one, you're my only hope"
 					DevTime 8
@@ -261,32 +348,7 @@ SoftwareType
 					Unlock 2025
 					Submarkets [ 4; 1; 4 ]
 					}
-				]
-			}
-	
-			{
-			Name "3D Rendering"
-			Spec 3D
-			CodeArt 0.1
-			DevTime 8
-			Submarkets	[ 1; 3; 5 ]
-			Unlock 1990
-			Optional True
-			Dependencies	["3D Editor"; "GPU"]
-			Features
-			[]
-			}
-			
-			{
-			Name "Networking"
-			Spec Network
-			CodeArt 0.75
-			DevTime 3
-			Submarkets	[ 4; 1; 2 ]
-			Unlock 1985
-			Optional True
-			Features
-				[
+					
 					{
 					Name	"Wifi"
 					Description "But why fi?"
@@ -306,6 +368,92 @@ SoftwareType
 					Unlock 1999
 					Submarkets [ 4; 1; 2 ]
 					Server		0.0002
+					}
+				]
+			}
+			{
+			Name "System"
+			Spec System
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 0; 0; 0 ]
+			Optional False
+			Features
+				[
+					{
+					Name		"Speech recognition"
+					Description "Ok Noogle"
+					DevTime		5
+					Level		2
+					CodeArt		0.9
+					Unlock 1990
+					Submarkets	[ 3; 0; 1 ]
+					}
+					{
+					Name	"Facial Recognition"
+					Description "Wundoos hello"
+					DevTime 6
+					CodeArt 0.9
+					Level 3
+					Unlock 2010
+					Submarkets [ 3; 6; 1 ]
+					}
+				]
+			}
+			{
+			Name "Illegal Software"
+			Spec Network
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 0; 0; 0 ]
+			Optional False
+			Features
+				[
+					{
+					Name		"Bit mining"
+					Description	"Mine bitcoin using your users' GPU to make an extra {Currency:0.1} per active user, at the risk of getting caught"
+					Server		0.0003
+					DevTime		6
+					Level		3
+					CodeArt		1
+					Submarkets	0
+					Script_EndOfDay
+					"if (Product.GetVar(\"Bitmining\", true))//Check if player has been caught
+						{
+						var extra = Product.Userbase * 0.1;//Calculate extra income
+						Product.DevCompany.MakeTransaction(extra, Sales, \"Datamining\");//Add money
+						Product.AddToCashflow(0, 0, 0, extra, 0, Time);//Add to product income chart
+						if (Random() * Product.Userbase > 400000)//Random chance of getting caught
+							{
+								LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
+								Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
+								Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
+								Product.KillAwareness();//Remove all marketing
+								Product.PutVar(\"Bitmining\", false);//Mark player as caught for this product
+							}
+						}"
+					}
+					{
+					Name		"Microphone surveillance"
+					Description "Listen in on your users' conversations to find and fix bugs before they are reported, at the risk of getting caught"
+					Server		0.0003
+					DevTime		3
+					Level		3
+					CodeArt		1
+					Submarkets	0
+					Script_EndOfDay
+					"if (Product.GetVar(\"MicMining\", true))//Check if player has been caught
+						{
+						Product.Bugs = Max(0, Product.Bugs - Product.Userbase * 0.01);//Remove 1 bug from product for each 100th active user
+						if (Random() * Product.Userbase > 1000000 * Product.Category.Popularity)//Random chance of getting caught
+							{
+							LaunchLawsuit(\"SpyingOnUsers\", Product.Sum, 1);//Create anonymous lawsuit
+							Product.DevCompany.AddFans(-Product.Userbase, Product.Category);//Remove fans and market recognition from player in category
+							Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
+							Product.KillAwareness();//Remove all marketing
+							Product.PutVar(\"MicMining\", false);//Mark player as caught for this product
+							}
+						}"
 					}
 				]
 			}
