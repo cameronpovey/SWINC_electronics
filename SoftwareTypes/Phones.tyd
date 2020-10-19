@@ -31,14 +31,14 @@ SoftwareType
 						Name 				Camera
 						BuiltInThumbnail	N/A
 						Price				20
-						Time				4
+						Time				2
 						DependsOn			"Main Camera"
 						}
 						{
 						Name 				Torch
 						BuiltInThumbnail	N/A
 						Price				10
-						Time				3
+						Time				2
 						DependsOn			"Torch"
 						}
 						
@@ -46,28 +46,28 @@ SoftwareType
 						Name 				MicroSD Slot
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				4
+						Time				2
 						DependsOn			"MicroSD Slot"
 						}
 						{
 						Name 				NFC
 						BuiltInThumbnail	N/A
 						Price				20
-						Time				4
+						Time				2
 						DependsOn			"NFC"
 						}
 						{
 						Name 				Selfie Camera
 						BuiltInThumbnail	N/A
 						Price				20
-						Time				5
+						Time				4
 						DependsOn			"Selfie Camera"
 						}
 						{
 						Name 				USB-C
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				6
+						Time				4
 						DependsOn			"USB-C"
 						}
 						{
@@ -81,7 +81,7 @@ SoftwareType
 						Name 				Infinity Display
 						BuiltInThumbnail	N/A
 						Price				40
-						Time				5
+						Time				4
 						DependsOn			"Infinity Display"
 						}
 						{
@@ -95,14 +95,14 @@ SoftwareType
 						Name 				Bigger phone
 						BuiltInThumbnail	N/A
 						Price				35
-						Time				5
+						Time				4
 						DependsOn			"Bigger phone"
 						}
 						{
 						Name 				Fingerprint Reader
 						BuiltInThumbnail	N/A
 						Price				30
-						Time				5
+						Time				4
 						DependsOn			"Fingerprint Reader"
 						}
 						{
@@ -116,14 +116,14 @@ SoftwareType
 						Name 				Super Thin
 						BuiltInThumbnail	N/A
 						Price				35
-						Time				6
+						Time				4
 						DependsOn			"Super Thin"
 						}
 						{
 						Name 				Folding Phone
 						BuiltInThumbnail	N/A
 						Price				50
-						Time				8
+						Time				4
 						DependsOn			"Folding Phone"
 						}
 						
@@ -139,7 +139,7 @@ SoftwareType
 						Name 				Protective Screen
 						BuiltInThumbnail	N/A
 						Price				35
-						Time				3
+						Time				2
 						DependsOn			"Protective Screen"
 						}
 						{
@@ -153,21 +153,21 @@ SoftwareType
 						Name 				4k Support
 						BuiltInThumbnail	N/A
 						Price				30
-						Time				5
+						Time				4
 						DependsOn			"4k Support"
 						}
 						{
 						Name 				120hz Support
 						BuiltInThumbnail	N/A
 						Price				40
-						Time				6
+						Time				4
 						DependsOn			"120hz Support"
 						}
 						{
 						Name 				Holographic Support
 						BuiltInThumbnail	N/A
 						Price				60
-						Time				8
+						Time				6
 						DependsOn			"Holographic Support"
 						}
 						
@@ -175,14 +175,14 @@ SoftwareType
 						Name 				2G Capable
 						BuiltInThumbnail	N/A
 						Price				5
-						Time				4
+						Time				2
 						DependsOn			"2G Capable"
 						}
 						{
 						Name 				3G Capable
 						BuiltInThumbnail	N/A
 						Price				10
-						Time				4
+						Time				2
 						DependsOn			"3G Capable"
 						}
 						
@@ -204,7 +204,7 @@ SoftwareType
 						Name 				6G Capable
 						BuiltInThumbnail	N/A
 						Price				35
-						Time				4
+						Time				6
 						DependsOn			"6G Capable"
 						}
 						
@@ -212,19 +212,19 @@ SoftwareType
 						Name 				Audio
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				6
+						Time				4
 						}
 						{
 						Name 				Screen
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				7
+						Time				4
 						}
 						{
 						Name 				Networking
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				6
+						Time				4
 						}
 						
 					]
@@ -248,7 +248,7 @@ SoftwareType
 						Output	Final
 						}
 					]
-				FinalTime	8
+				FinalTime	4
 				}
 	Categories
 		[
@@ -268,7 +268,7 @@ SoftwareType
 			Name "Smart"
 			Description "Your phone that went to school."
 			Popularity 0.7
-			IdealPrice 800
+			IdealPrice 1000
 			Unlock 1995
 			Submarkets [4; 3; 4]
 			Retention 24
@@ -488,7 +488,7 @@ SoftwareType
 					CodeArt 0.75
 					Level 3
 					Unlock 2025
-					Submarkets [ 0; 0; 4 ]
+					Submarkets [ 1; 1; 4 ]
 					}
 					
 					{
