@@ -9,6 +9,84 @@ SoftwareType
 	SubmarketNames	[ Speed; Functionality; Design ]
 	OptimalDevTime 	24
 	Unlock 2005
+	Hardware	True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name 				USB Ports
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				1
+						DependsOn			"USB Ports"
+						}
+						{
+						Name 				SD Card Slot
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				1
+						DependsOn			"SD Card Slot"
+						}
+						{
+						Name 				HDMI Output
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				1
+						DependsOn			"HDMI Output"
+						}
+						{
+						Name 				Audio Jack
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				1
+						DependsOn			"Audio Jack"
+						}
+						{
+						Name 				Ethernet Port
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				1
+						DependsOn			"Ethernet Port"
+						}
+						{
+						Name 				Bluetooth
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				1
+						DependsOn			"Bluetooth"
+						}
+						{
+						Name 				Audio
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				1
+						}
+						{
+						Name 				Networking
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				1
+						}
+					]
+				Processes
+					[
+						
+						{
+						Inputs	[ "Audio Jack" ]
+						Output	Audio
+						}
+						{
+						Inputs	[ "Ethernet Port" ]
+						Output	Networking
+						}
+						{
+						Inputs	[ "USB Ports"; "SD Card Slot"; "HDMI Output"; "Bluetooth"; "Audio"; "Networking" ]
+						Output	Final
+						}
+					]
+				FinalTime	2
+				}
 	Categories
 		[
 			{
@@ -25,11 +103,11 @@ SoftwareType
 	Features
 		[
 			{
-			Name "System"
-			Spec System
-			CodeArt 1
-			DevTime 3
-			Submarkets	[ 3; 1; 2 ]
+			Name		Hardware
+			Spec		Hardware
+			DevTime		2
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
 			Features
 				[
 					{
@@ -58,18 +136,6 @@ SoftwareType
 					Unlock 2003
 					Submarkets [ 3; 3; 2 ]
 					}
-					
-				]
-			}
-			{
-			Name		Audio
-			Spec		Audio
-			DevTime		6
-			CodeArt		1
-			Submarkets	[ 2; 1; 2 ]
-			Dependencies	"Audio Tool"
-			Features
-				[
 					{
 					Name		"Audio Jack"
 					Description "The sound is all around us"
@@ -79,19 +145,6 @@ SoftwareType
 					Unlock 1985
 					Submarkets	[ 2; 3; 3 ]
 					}
-				]
-			}
-			
-			{
-			Name "Networking"
-			Spec Network
-			CodeArt 0.75
-			DevTime 3
-			Submarkets	[ 4; 1; 2 ]
-			Unlock 1985
-			Optional True
-			Features
-				[
 					{
 					Name	"Ethernet Port"
 					Description "Wires?"
