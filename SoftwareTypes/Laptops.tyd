@@ -18,7 +18,7 @@ SoftwareType
 						Name 				Trackpad
 						BuiltInThumbnail	N/A
 						Price				20
-						Time				3
+						Time				2
 						DependsOn			"Trackpad"
 						}
 						{
@@ -46,7 +46,7 @@ SoftwareType
 						Name 				Fingerprint Reader
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				3
+						Time				4
 						DependsOn			"Fingerprint Reader"
 						}
 						{
@@ -67,21 +67,21 @@ SoftwareType
 						Name 				Super Thin
 						BuiltInThumbnail	N/A
 						Price				35
-						Time				3
+						Time				4
 						DependsOn			"Super Thin"
 						}
 						{
 						Name 				Gaming
 						BuiltInThumbnail	N/A
 						Price				40
-						Time				5
+						Time				4
 						DependsOn			"Gaming"
 						}
 						{
 						Name 				Surround sound
 						BuiltInThumbnail	N/A
 						Price				20
-						Time				3
+						Time				4
 						DependsOn			"Surround sound"
 						}
 						{
@@ -95,7 +95,7 @@ SoftwareType
 						Name 				HDR Support
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				3
+						Time				4
 						DependsOn			"HDR Support"
 						}
 						{
@@ -123,14 +123,14 @@ SoftwareType
 						Name 				Wifi
 						BuiltInThumbnail	N/A
 						Price				15
-						Time				3
+						Time				4
 						DependsOn			"Wifi"
 						}
 						{
 						Name 				Built in VPN
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				3
+						Time				4
 						DependsOn			"Built in VPN"
 						}
 						
@@ -138,19 +138,19 @@ SoftwareType
 						Name 				Audio
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				6
+						Time				4
 						}
 						{
 						Name 				Screen
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				7
+						Time				4
 						}
 						{
 						Name 				Networking
 						BuiltInThumbnail	N/A
 						Price				25
-						Time				6
+						Time				4
 						}
 					]
 				Processes
@@ -173,7 +173,7 @@ SoftwareType
 						Output	Final
 						}
 					]
-				FinalTime	8
+				FinalTime	4
 				}
 	Categories
 		[
