@@ -5,10 +5,98 @@ SoftwareType
 	Description		"Graphics Processing Unit"
 	Random			0.5
 	OneClient		False
-	InHouse			False
+	InHouse			True
 	SubmarketNames	[ Speed; Multitasking; Gaming ]
 	OptimalDevTime 	50
 	Unlock 1995
+	Hardware	True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name 				VGA Output
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				2
+						DependsOn			"VGA Output"
+						}
+						{
+						Name 				DVI Output
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				2
+						DependsOn			"DVI Output"
+						}
+						{
+						Name 				Multimonitor support
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"Multimonitor support"
+						}
+						{
+						Name 				HDMI Output
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"HDMI Output"
+						}
+						{
+						Name 				DisplayPort output
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"DisplayPort output"
+						}
+						{
+						Name 				SLI Support
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"SLI Support"
+						}
+						{
+						Name 				RGB
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"RGB"
+						}
+						{
+						Name 				VR Capable
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"VR Capable"
+						}
+						{
+						Name 				Ray-Tracing
+						BuiltInThumbnail	N/A
+						Price				30
+						Time				6
+						DependsOn			"Ray-Tracing"
+						}
+						{
+						Name 				Graphics
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				4
+						}
+					]
+				Processes
+					[
+						{
+						Inputs	[ "VR Capable"; "Ray-Tracing" ]
+						Output	Graphics
+						}
+						{
+						Inputs	[ "VGA Output"; "DVI Output"; "Multimonitor support"; "HDMI Output"; "DisplayPort output"; "SLI Support"; "RGB"; "Graphics" ]
+						Output	Final
+						}
+					]
+				FinalTime	4
+				}
 	Categories
 		[
 			{
@@ -26,8 +114,8 @@ SoftwareType
 	Features
 		[
 			{
-			Name "System"
-			Spec System
+			Name "Hardware"
+			Spec  Hardware
 			CodeArt 1
 			DevTime 3
 			Submarkets	[ 2; 2; 2 ]
@@ -92,20 +180,8 @@ SoftwareType
 					CodeArt 0.5
 					Level 3
 					Unlock 2005
-					Submarkets [ 2; 2; 2 ]
+					Submarkets [ 3; 3; 3 ]
 					}
-				]
-			}
-			{
-			Name "Graphics"
-			Spec 3D
-			CodeArt 1
-			DevTime 3
-			Submarkets	[ 1; 2; 3 ]
-			Dependencies	"3D Editor"
-			Optional False
-			Features
-				[
 					{
 					Name	"VR Capable"
 					Description "It looks like its "
@@ -124,6 +200,17 @@ SoftwareType
 					Unlock 2018
 					Submarkets [ 3; 2; 4 ]
 					}
+				]
+			}
+			{
+			Name "Illegal Software"
+			Spec Network
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 0; 0; 0 ]
+			Optional	False
+			Features
+				[
 					{
 					Name		"Bit mining"
 					Description	"Mine bitcoin using your users' GPU to make an extra {Currency:0.1} per active user, at the risk of getting caught"
