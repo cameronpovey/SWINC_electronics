@@ -8,6 +8,103 @@ SoftwareType
 	Random 0.25
 	SubmarketNames	[ Sound; Display; Design ]
 	OptimalDevTime 	36
+	Hardware	True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name 				VGA Input
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				1
+						DependsOn			"VGA Input"
+						}
+						{
+						Name 				DVI Input
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				1
+						DependsOn			"DVI Input"
+						}
+						{
+						Name 				1ms response time
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				1
+						DependsOn			"1ms response time"
+						}
+						{
+						Name 				HDR Support
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				2
+						DependsOn			"HDR Support"
+						}
+						{
+						Name 				HDMI Input
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				2
+						DependsOn			"HDMI Input"
+						}
+						{
+						Name 				DisplayPort Input
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				2
+						DependsOn			"DisplayPort Input"
+						}
+						{
+						Name 				C-Sync
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				2
+						DependsOn			"C-Sync"
+						}
+						{
+						Name 				120hz
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				2
+						DependsOn			"120hz"
+						}
+						{
+						Name 				Surround sound
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				2
+						DependsOn			"Surround sound"
+						}
+						{
+						Name 				Audio Jack
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				1
+						DependsOn			"Audio Jack"
+						}
+						
+						{
+						Name 				Audio
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				1
+						}
+					]
+				Processes
+					[
+						
+						{
+						Inputs	[ "Surround sound"; "Audio Jack" ]
+						Output	Audio
+						}
+						{
+						Inputs	[ "VGA Input"; "DVI Input"; "1ms response time"; "HDR Support"; "HDMI Input"; "DisplayPort Input"; "C-Sync"; "120hz"; "Audio" ]
+						Output	Final
+						}
+					]
+				FinalTime	3
+				}
 	Categories
 		[
 			{
@@ -24,8 +121,8 @@ SoftwareType
 	Features
 		[
 			{
-			Name "System"
-			Spec System
+			Name "Hardware"
+			Spec Hardware
 			CodeArt 1
 			DevTime 3
 			Submarkets	[ 3; 1; 2 ]
@@ -103,18 +200,6 @@ SoftwareType
 					Submarkets [ 1; 4; 2 ]
 					}
 					
-				]
-			}
-			{
-			Name		Audio
-			Spec		Audio
-			DevTime		6
-			CodeArt		0.75
-			Submarkets	[ 5; 0; 1 ]
-			Dependencies	["Audio Tool"; "Speaker"]
-			Optional True
-			Features
-				[
 					{
 					Name		"Surround sound"
 					Description "The sound is all around us"
