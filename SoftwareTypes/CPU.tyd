@@ -5,9 +5,58 @@ SoftwareType
 	Description		"Central Processing Unit"
 	Random			0.5
 	OneClient		False
-	InHouse			False
+	InHouse			True
 	SubmarketNames	[ Speed; Multitasking; Gaming ]
 	OptimalDevTime 	50
+	Hardware	True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name 				Quad-Core
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				4
+						DependsOn			"Quad-Core"
+						}
+						{
+						Name 				+4 more Cores
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						DependsOn			"+4 more Cores"
+						}
+						{
+						Name 				Hyperthreading
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						DependsOn			"Hyperthreading"
+						}
+						{
+						Name 				+8 more Cores
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"+8 more Cores"
+						}
+						{
+						Name 				Casing
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				4
+						}
+					]
+				Processes
+					[
+						{
+						Inputs	[ "Quad-Core"; "+4 more Cores"; "Hyperthreading"; "+8 more Cores"; "Casing" ]
+						Output	Final
+						}
+					]
+				FinalTime	4
+				}
 	Categories
 		[
 			{
@@ -24,8 +73,8 @@ SoftwareType
 	Features
 		[
 			{
-			Name "System"
-			Spec System
+			Name "Hardware"
+			Spec Hardware
 			CodeArt 1
 			DevTime 3
 			Submarkets	[ 3; 1; 2 ]
@@ -68,18 +117,6 @@ SoftwareType
 					Submarkets [ 6; 6; 4 ]
 					}
 				]
-			}
-			{
-			Name "Intergrated graphics"
-			Spec 3D
-			CodeArt 0.1
-			DevTime 8
-			Submarkets	[ 1; 3; 5 ]
-			Unlock 1990
-			Optional True
-			Dependencies	"3D Editor"
-			Features
-			[]
 			}
 		]
 	}
