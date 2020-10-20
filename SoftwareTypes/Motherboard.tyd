@@ -3,12 +3,109 @@ SoftwareType
 	Name			"Motherboard"
 	Category		Hardware
 	Description		"The Mother for all your computer parts"
-	Random			0.4
+	Random			0.2
 	OneClient		False
-	InHouse			False
+	InHouse			True
 	SubmarketNames	[ Speed; Functionality; Design]
 	OptimalDevTime 	50
 	NameGenerator Motherboard
+	Hardware	True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name 				VGA Output
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				2
+						DependsOn			"VGA Output"
+						}
+						{
+						Name 				HDMI Output
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						DependsOn			"HDMI Output"
+						}
+						{
+						Name 				DisplayPort output
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						DependsOn			"DisplayPort output"
+						}
+						{
+						Name 				More Ports
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"More Ports"
+						}
+						{
+						Name 				M.2 Capable
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"M.2 Capable"
+						}
+						{
+						Name 				RGB
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"RGB"
+						}
+						{
+						Name 				Ethernet Port
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						DependsOn			"Ethernet Port"
+						}
+						{
+						Name 				Integrated Bluetooth
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"Integrated Bluetooth"
+						}
+						{
+						Name 				Integrated Wifi
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"Integrated Wifi"
+						}
+						
+						{
+						Name 				Audio Output
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				2
+						DependsOn			"Audio Output"
+						}
+						
+						{
+						Name 				Networking
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				2
+						}
+					]
+				Processes
+					[
+						{
+						Inputs	[ "Ethernet Port"; "Integrated Bluetooth"; "Integrated Wifi" ]
+						Output	Networking
+						}
+						{
+						Inputs	[ "VGA Output"; "HDMI Output"; "DisplayPort output"; "More Ports"; "M.2 Capable"; "RGB"; "Audio Output"; "Networking" ]
+						Output	Final
+						}
+					]
+				FinalTime	4
+				}
 	Categories
 		[
 			{
@@ -105,27 +202,7 @@ SoftwareType
 					Unlock 2005
 					Submarkets [ 2; 2; 3 ]
 					}
-				]
-			}
-			{
-			Name "Audio Output"
-			Spec Audio
-			CodeArt 1
-			DevTime 3
-			Submarkets	[ 2; 2; 2 ]
-			Features
-				[]
-			}
-			{
-			Name "Network"
-			Spec Network
-			CodeArt 1
-			DevTime 3
-			Submarkets	[ 2; 2; 2 ]
-			Optional True
-			Unlock 1990
-			Features
-				[
+					
 					{
 					Name	"Ethernet Port"
 					Description "Wired!"
@@ -153,6 +230,15 @@ SoftwareType
 					Server		0.0002
 					}
 				]
+			}
+			{
+			Name "Audio Output"
+			Spec Audio
+			CodeArt 1
+			DevTime 3
+			Submarkets	[ 2; 2; 2 ]
+			Features
+				[]
 			}
 		]
 	}
