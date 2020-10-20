@@ -5,9 +5,92 @@ SoftwareType
 	Description		"Holds Everything!"
 	Random			0.5
 	OneClient		False
-	InHouse			False
+	InHouse			True
 	SubmarketNames	[ Functionality; Cooling; Design ]
 	OptimalDevTime 	38
+	Hardware	True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name 				Integrated Cable Management
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				4
+						DependsOn			"Integrated Cable Management"
+						}
+						{
+						Name 				Glass Side Panel
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"Glass Side Panel"
+						}
+						{
+						Name 				Water Cooling Support
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						DependsOn			"Water Cooling Support"
+						}
+						{
+						Name 				RGB
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"RGB"
+						}
+						
+						{
+						Name 				Power Button
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				2
+						DependsOn			"Power Button"
+						}
+						{
+						Name 				Front Audio Jack
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				2
+						DependsOn			"Front Audio Jack"
+						}
+						{
+						Name 				USB port
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				2
+						DependsOn			"USB port"
+						}
+						{
+						Name 				USB3 port
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"USB3 port"
+						}
+						
+						{
+						Name 				IO
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				4
+						}
+					]
+				Processes
+					[
+						{
+						Inputs	[ "Power Button"; "Front Audio Jack"; "USB port"; "USB3 port" ]
+						Output	IO
+						}
+						{
+						Inputs	[ "Integrated Cable Management"; "Glass Side Panel"; "Water Cooling Support"; "RGB"; "IO" ]
+						Output	Final
+						}
+					]
+				FinalTime	4
+				}
 	Categories
 		[
 			{
@@ -24,8 +107,8 @@ SoftwareType
 	Features
 		[
 			{
-			Name "Design"
-			Spec 3D
+			Name "Hardware"
+			Spec Hardware
 			CodeArt 1
 			DevTime 3
 			Submarkets	[ 2; 2; 4 ]
@@ -36,7 +119,7 @@ SoftwareType
 					Description "Manage your cables today!"
 					DevTime 5
 					CodeArt 0.5
-					Level 1
+					Level 2
 					Submarkets [ 3; 1; 5 ]
 					}
 					{
@@ -66,18 +149,7 @@ SoftwareType
 					Unlock 2005
 					Submarkets [ 1; 1; 5 ]
 					}
-				]
-			}
-			{
-			Name "Front IO"
-			Spec System
-			Description "Add more functionality or have a clean look"
-			CodeArt 0.75
-			DevTime 3
-			Submarkets	[ 4; 1; 1 ]
-			Optional	True
-			Features
-				[
+					
 					{
 					Name	"Power Button"
 					Description "I HAVE THE POWEERRRRR!"
