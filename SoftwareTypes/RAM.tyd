@@ -5,9 +5,46 @@ SoftwareType
 	Description		"Random Access Memory"
 	Random			0.5
 	OneClient		False
-	InHouse			False
+	InHouse			True
 	SubmarketNames	[ Functionality; Gaming; Design ]
 	OptimalDevTime 	38
+	Hardware True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name	"DDR4"
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"DDR4"
+						}
+						{
+						Name	"RGB"
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"RGB"
+						}
+						
+						{
+						Name 				RAM
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				4
+						}
+					]
+				Processes
+					[
+						{
+						Inputs	[ "DDR4"; "RGB"; "RAM" ]
+						Output	Final
+						}
+					]
+				FinalTime 4
+				}
+	
 	Categories
 		[
 			{
@@ -65,7 +102,7 @@ SoftwareType
 					CodeArt 1
 					Level 3
 					Unlock 2020
-					Submarkets [ 6; 2; 0 ]
+					Submarkets [ 6; 4; 2 ]
 					}
 				]
 			}
