@@ -5,9 +5,63 @@ SoftwareType
 	Description		"Cool your CPU"
 	Random			0.25
 	OneClient		False
-	InHouse			False
+	InHouse			True
 	SubmarketNames	[ Noise Reduction; Cooling; Design ]
 	OptimalDevTime 	38
+	Hardware True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name	"Included Thermal Paste"
+						BuiltInThumbnail	N/A
+						Price				5
+						Time				2
+						DependsOn			"Included Thermal Paste"
+						}
+						{
+						Name	"3 Fans"
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"3 Fans"
+						}
+						{
+						Name	"RGB"
+						BuiltInThumbnail	N/A
+						Price				7
+						Time				4
+						DependsOn			"RGB"
+						}
+						
+						{
+						Name 				Liquid
+						BuiltInThumbnail	N/A
+						Price				5
+						Time				4
+						}
+						{
+						Name 				Radiator
+						BuiltInThumbnail	N/A
+						Price				5
+						Time				4
+						}
+					]
+					
+				Processes
+					[
+						{
+						Inputs	[ "3 Fans"; "RGB" ]
+						Output	Radiator
+						}
+						{
+						Inputs	[ "Radiator"; "Included Thermal Paste" ]
+						Output	Final
+						}
+					]
+				FinalTime 4
+				}
 	Categories
 		[	
 			{
@@ -66,6 +120,15 @@ SoftwareType
 					Level 2
 					Unlock 2010
 					Submarkets [ -2; 5; 1 ]
+					}
+					{
+					Name	"3 Fans"
+					Description "This will make your system go fast"
+					DevTime 6
+					CodeArt 0.9
+					Level 2
+					Unlock 2010
+					Submarkets [ 0; 4; 2 ]
 					}
 					{
 					Name	"Stock Cooler"
