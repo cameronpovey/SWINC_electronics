@@ -5,9 +5,67 @@ SoftwareType
 	Description		"Power Supply Units"
 	Random			0.5
 	OneClient		False
-	InHouse			False
+	InHouse			True
 	SubmarketNames	[ Capacity; Power Efficiency; Design ]
 	OptimalDevTime 	38
+	Hardware True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name	"Modular"
+						BuiltInThumbnail	N/A
+						Price				30
+						Time				4
+						DependsOn			"Modular"
+						}
+						{
+						Name	"RGB"
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"RGB"
+						}
+						{
+						Name	"Integrated fan"
+						BuiltInThumbnail	N/A
+						Price				7
+						Time				4
+						DependsOn			"Integrated fan"
+						}
+						{
+						Name	"Capacity boost"
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						DependsOn			"Capacity boost"
+						}
+						{
+						Name	"Platinum Efficiency"
+						BuiltInThumbnail	N/A
+						Price				35
+						Time				4
+						DependsOn			"Platinum Efficiency"
+						}
+						
+						{
+						Name 				Casing
+						BuiltInThumbnail	N/A
+						Price				5
+						Time				4
+						}
+					]
+					
+				Processes
+					[
+						{
+						Inputs	[ "Modular"; "RGB"; "Integrated fan"; "Capacity boost"; "Platinum Efficiency"; "Casing"; ]
+						Output	Final
+						}
+					]
+				FinalTime 4
+				}
 	Categories
 		[
 			{
