@@ -9,6 +9,7 @@ SoftwareType
 	SubmarketNames	[ Speed; Security; Design ]
 	OptimalDevTime 	48
 	Unlock 			2015
+	Hardware True
 	Manufacturing
 		{
 		Components
@@ -59,7 +60,7 @@ SoftwareType
 				Name 				"Speaker"
 				BuiltInThumbnail	N/A
 				Price				5
-				Time				4
+				Time				2
 				}
 				{
 				Name 				"Surround Sound"
@@ -72,7 +73,7 @@ SoftwareType
 				Name 				"Protective Screen"
 				BuiltInThumbnail	N/A
 				Price				10
-				Time				4
+				Time				2
 				DependsOn			"Protective Screen"
 				}
 				{
@@ -86,7 +87,7 @@ SoftwareType
 				Name 				"Holographic Display"
 				BuiltInThumbnail	N/A
 				Price				20
-				Time				8
+				Time				6
 				DependsOn			"Holographic Display"
 				}
 				{
@@ -100,14 +101,14 @@ SoftwareType
 				Name 				"GPS"
 				BuiltInThumbnail	N/A
 				Price				10
-				Time				4
+				Time				2
 				DependsOn			"GPS"
 				}
 				{
 				Name 				"LTE Capable"
 				BuiltInThumbnail	N/A
 				Price				10
-				Time				4
+				Time				2
 				DependsOn			"LTE Capable"
 				}
 
@@ -115,7 +116,7 @@ SoftwareType
 				Name 				"System"
 				BuiltInThumbnail	N/A
 				Price				20
-				Time				8
+				Time				4
 				}
 				{
 				Name 				"Audio"
@@ -180,8 +181,8 @@ SoftwareType
 	Features
 		[
 			{
-			Name "System"
-			Spec System
+			Name "Hardware"
+			Spec Hardware
 			Dependencies	["CPU"; "Motherboard"; "RAM"; "PSU"; "CPU Cooling"; "Storage"; "Speaker"]
 			CodeArt 1
 			DevTime 3
