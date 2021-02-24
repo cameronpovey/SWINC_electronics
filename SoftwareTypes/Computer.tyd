@@ -8,11 +8,65 @@ SoftwareType
 	InHouse			False
 	SubmarketNames	[ Functionality; Speed; Design ]
 	OptimalDevTime 	24
+	Hardware True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name	"Mini"
+						BuiltInThumbnail	N/A
+						Price				30
+						Time				4
+						DependsOn			"Mini"
+						}
+						
+						{
+						Name 				Processer
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						}
+						{
+						Name 				Graphics
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						}
+						{
+						Name 				Case
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						}
+						{
+						Name 				Storage
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						}
+						{
+						Name 				Power
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						}
+					]
+					
+				Processes
+					[
+						{
+						Inputs	[ "Mini"; "Processer"; "Graphics"; "Case"; "Storage"; "Power" ]
+						Output	Final
+						}
+					]
+				FinalTime 8
+				}
 	Categories
 		[
 			{
 			Name "Default"
-			Popularity 0.05
+			Popularity 0.025
 			IdealPrice 800
 			Submarkets [5; 5; 5]
 			Retention 36
@@ -24,8 +78,8 @@ SoftwareType
 	Features
 		[
 			{
-			Name "System"
-			Spec System
+			Name "Hardware"
+			Spec Hardware
 			Dependencies	["CPU"; "Motherboard"; "RAM"; "PSU"; "CPU Cooling"; "Storage"; "Case"]
 			CodeArt 1
 			DevTime 3
