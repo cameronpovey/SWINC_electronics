@@ -7,7 +7,83 @@ SoftwareType
 	OneClient		False
 	InHouse			False
 	SubmarketNames	[ Functionality; Sound Quality; Comfort ]
-	OptimalDevTime 	24
+	OptimalDevTime 	36
+	Hardware True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name	"Volume Control"
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				2
+						DependsOn			"Volume Control"
+						}
+						{
+						Name	"AUX Capable"
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				2
+						DependsOn			"AUX Capable"
+						}
+						{
+						Name	"Play pause buttons"
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				2
+						DependsOn			"Play pause buttons"
+						}
+						{
+						Name	"Built-in microphone"
+						BuiltInThumbnail	N/A
+						Price				8
+						Time				2
+						DependsOn			"Built-in microphone"
+						}
+						{
+						Name	"Skip button"
+						BuiltInThumbnail	N/A
+						Price				8
+						Time				2
+						DependsOn			"Skip button"
+						}
+						{
+						Name	"Better build quality"
+						BuiltInThumbnail	N/A
+						Price				8
+						Time				2
+						DependsOn			"Better build quality"
+						}
+						{
+						Name	"Wireless"
+						BuiltInThumbnail	N/A
+						Price				8
+						Time				2
+						DependsOn			"Wireless"
+						}
+						
+						{
+						Name	"Casing"
+						BuiltInThumbnail	N/A
+						Price				8
+						Time				2
+						}
+					]
+					
+				Processes
+					[
+						{
+						Inputs	[ "Volume Control"; "AUX Capable"; "Play pause buttons"; "Built-in microphone" ]
+						Output	Casing
+						}
+						{
+						Inputs	[ "Casing"; "Better build quality"; "Wireless" ]
+						Output	Final
+						}
+					]
+				FinalTime 4
+				}
 	Categories
 		[
 			{
@@ -26,7 +102,7 @@ SoftwareType
 			Popularity 1
 			IdealPrice 200
 			Submarkets [4; 5; 6]
-			Retention 48
+			Retention 36
 			TimeScale 1
 			Iterative 0.1
 			Unlock 2010
@@ -36,8 +112,8 @@ SoftwareType
 	Features
 		[
 			{
-			Name "System"
-			Spec System
+			Name "Hardware"
+			Spec Hardware
 			CodeArt 1
 			DevTime 3
 			Submarkets	[ 3; 1; 2 ]
@@ -117,13 +193,13 @@ SoftwareType
 			Features
 				[
 					{
-					Name	"Extra Range"
+					Name	"Extra Bluetooth Range"
 					Description "Free range speakers!"
 					DevTime 2
 					CodeArt 0.9
-					Level 1
+					Level 2
 					Submarkets [3; 5; 1 ]
-					Unlock 2000
+					Unlock 2005
 					}
 					{
 					Name	"Bigger battery"
