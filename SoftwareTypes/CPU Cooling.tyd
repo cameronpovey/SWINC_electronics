@@ -88,8 +88,8 @@ SoftwareType
 	Features
 		[
 			{
-			Name "Design"
-			Spec 3D
+			Name "Hardware"
+			Spec Hardware
 			CodeArt 1
 			DevTime 3
 			Submarkets	[ 2; 2; 4 ]
