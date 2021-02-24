@@ -24,7 +24,7 @@ Most software needs an Operating System to run on. When people stop buying a lin
 			Retention	48
 			TimeScale	0.8
 			Iterative	1
-			IdealPrice	160
+			IdealPrice	300
 			Submarkets	[ 4; 1; 0]
 			}
 			{
@@ -33,9 +33,9 @@ Most software needs an Operating System to run on. When people stop buying a lin
 			LagBehind	10
 			Popularity	1
 			Retention	36
-			TimeScale	0.7
+			TimeScale	0.8
 			Iterative	1
-			IdealPrice	140
+			IdealPrice	400
 			Unlock		1995
 			Submarkets	[ 4; 1; 2]
 			}
@@ -75,14 +75,6 @@ Most software needs an Operating System to run on. When people stop buying a lin
 					Submarkets	[ 1; 0; 2 ]
 					}
 					{
-					Name		"Touch"
-					Description "You can never have enough greasy finger prints on a surface"
-					DevTime		6
-					Level		2
-					CodeArt		1
-					Submarkets	[ 1; 0; 0 ]
-					}
-					{
 					Name		"User accounts"
 					DevTime		5
 					Level		2
@@ -117,6 +109,7 @@ Most software needs an Operating System to run on. When people stop buying a lin
 					DevTime		5
 					Level		2
 					CodeArt		1
+					SoftwareCategories [ Computer ]
 					Submarkets	[ 0; 1; 0 ]
 					}
 					{
@@ -148,6 +141,7 @@ Most software needs an Operating System to run on. When people stop buying a lin
 					DevTime		4
 					Level		2
 					CodeArt		1
+					SoftwareCategories [ Computer ]
 					Submarkets	[ 0; 0; 1 ]
 					}
 					{
@@ -203,6 +197,7 @@ Most software needs an Operating System to run on. When people stop buying a lin
 					DevTime		4
 					Level		2
 					CodeArt		1
+					SoftwareCategories [ Computer; Console ]
 					Submarkets	[ 0; 0; 1 ]
 					}
 					{
@@ -231,6 +226,7 @@ Most software needs an Operating System to run on. When people stop buying a lin
 		Product.Userbase = Product.Userbase * 0.05;//Remove 95% of active users
 		Product.KillAwareness();//Remove all marketing
 		Product.PutVar(\"MicMining\", false);//Mark player as caught for this product
+		AddPopup(Localize(\"SurveillanceNotification\", Product.Name), 1, \"Exclamation\", Issue);//Add notification in top left corner
 		}
 	}"
 					}
@@ -271,6 +267,71 @@ Most software needs an Operating System to run on. When people stop buying a lin
 					Level		2
 					CodeArt		1
 					Submarkets	[ 1; 0; 0 ]
+					}
+				]
+			}
+			{
+			Name		Hardware
+			Spec		Hardware
+			DevTime		2
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			SoftwareCategories	[ Console; Phone ]
+			Features
+				[
+					{
+					Name				"Touch"
+					Description 		"You can never have enough greasy finger prints on a surface"
+					DevTime				1
+					Level				2
+					CodeArt				1
+					Submarkets			[ 1; 0; 0 ]
+					SoftwareCategories	[ Phone; Watch ]
+					}
+					{
+					Name				"Vibration"
+					Description			"Device go brrr"
+					DevTime				1
+					Level				1
+					CodeArt				1
+					SoftwareCategories	[ Phone; Console; Watch ]
+					Submarkets			[ 1; 0; 3 ]
+					}
+					{
+					Name				"Fingerprint scanner"
+					DevTime				1
+					Level				2
+					CodeArt				1
+					Submarkets			[ 1; 4; 0 ]
+					SoftwareCategories	[ Phone ]
+					}
+					{
+					Name				"Motion detection"
+					Description			"Who doesn't want joysticks embedded in their TVs?"
+					DevTime				1
+					Level				2
+					CodeArt				1
+					Submarkets			[ 2; 0; 1 ]
+					SoftwareCategories	[ Console ]
+					}
+					{
+					Name				"External drive"
+					Description			"We put save games on memory cards and save games on hard drives"
+					DevTime				2
+					Level				1
+					CodeArt				1
+					Submarkets			[ 0; 2; 4 ]
+					SoftwareCategories	[ Console ]
+					}
+					{
+					Name				"Super optimization"
+					Description			"Spend time when developing software to save money when ordering hardware (Remove extra cost when ordering product prints)"
+					DevTime				16
+					Level				3
+					CodeArt				1
+					Submarkets			0
+					SoftwareCategories	[ Phone; Console ]
+					Script_OnRelease	"Product.HardwarePrice = Product.HardwarePrice / MarketSimulation.HardwareCopyPriceFactor"
 					}
 				]
 			}
