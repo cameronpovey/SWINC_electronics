@@ -3,17 +3,123 @@ SoftwareType
 	Name			"Speaker"
 	Category		Electronics
 	Description		"Speak!"
-	Random			0.2
+	Random			0.1
 	OneClient		False
-	InHouse			False
+	InHouse			True
 	SubmarketNames	[ Functionality; Sound Quality; Volume ]
-	OptimalDevTime 	24
+	OptimalDevTime 	36
+	Hardware True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name	"Volume Control"
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				2
+						DependsOn			"Volume Control"
+						}
+						{
+						Name	"AUX Capable"
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				2
+						DependsOn			"AUX Capable"
+						}
+						{
+						Name	"Built-in Radio"
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				2
+						DependsOn			"Built-in Radio"
+						}
+						{
+						Name	"Play pause buttons"
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				2
+						DependsOn			"Play pause buttons"
+						}
+						{
+						Name	"Built-in Dock"
+						BuiltInThumbnail	N/A
+						Price				8
+						Time				2
+						DependsOn			"Built-in Dock"
+						}
+						{
+						Name	"Skip button"
+						BuiltInThumbnail	N/A
+						Price				2
+						Time				2
+						DependsOn			"Skip button"
+						}
+						{
+						Name	"Bluetooth capable"
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				2
+						DependsOn			"Bluetooth capable"
+						}
+						{
+						Name	"Extra Bluetooth Range"
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				2
+						DependsOn			"Extra Bluetooth Range"
+						}
+						{
+						Name	"Bigger battery"
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				2
+						DependsOn			"Bigger battery"
+						}
+						
+						{
+						Name 				System
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				4
+						}
+						{
+						Name 				Casing
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				4
+						}
+						{
+						Name 				Radiator
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				4
+						}
+					]
+					
+				Processes
+					[
+						{
+						Inputs	[ "Bluetooth capable"; "Built-in Radio"; "Bigger battery"; "Extra Bluetooth Range" ]
+						Output	System
+						}
+						{
+						Inputs	[ "Volume Control"; "AUX Capable"; "Play pause buttons"; "Built-in Dock"; "Skip button" ]
+						Output	Casing
+						}
+						{
+						Inputs	[ "System"; "Casing" ]
+						Output	Final
+						}
+					]
+				FinalTime 4
+				}
 	Categories
 		[
 			{
 			Name "Default"
 			Popularity 1
-			IdealPrice 100
+			IdealPrice 200
 			Submarkets [3; 8; 4]
 			Retention 36
 			TimeScale 1
@@ -36,8 +142,8 @@ SoftwareType
 	Features
 		[
 			{
-			Name "System"
-			Spec System
+			Name "Hardware"
+			Spec Hardware
 			CodeArt 1
 			DevTime 3
 			Submarkets	[ 3; 1; 2 ]
