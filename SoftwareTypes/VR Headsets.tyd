@@ -9,6 +9,86 @@ SoftwareType
 	SubmarketNames	[ Functionality; Display; Comfort ]
 	OptimalDevTime 	36
 	Unlock 2010
+	Hardware True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name	"Built-in speakers"
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				2
+						DependsOn			"Built-in speakers"
+						}
+						{
+						Name	"Tracking improvements"
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						DependsOn			"Tracking improvements"
+						}
+						{
+						Name	"No wires!"
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				4
+						DependsOn			"No wires!"
+						}
+						{
+						Name	"Omnidirectional treadmill"
+						BuiltInThumbnail	N/A
+						Price				50
+						Time				4
+						DependsOn			"Omnidirectional treadmill"
+						}
+						
+						{
+						Name	"Two Controllers"
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				4
+						DependsOn			"Two Controllers"
+						}
+						{
+						Name	"Hand Tracking"
+						BuiltInThumbnail	N/A
+						Price				50
+						Time				2
+						DependsOn			"Hand Tracking"
+						}
+						
+						{
+						Name 				Headset
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						}
+						{
+						Name 				Controllers
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						}
+					]
+					
+				Processes
+					[
+						{
+						Inputs	[ "Built-in speakers"; "Tracking improvements"; "No wires!"; "Omnidirectional treadmill"; ]
+						Output	Headset
+						}
+						{
+						Inputs	[ "Two Controllers"; "Hand Tracking" ]
+						Output	Controllers
+						}
+						{
+						Inputs	[ "Controllers"; "Headset" ]
+						Output	Final
+						}
+					]
+				FinalTime 4
+				}
 	Categories
 		[
 			{
@@ -25,8 +105,8 @@ SoftwareType
 	Features
 		[
 			{
-			Name "Headset"
-			Spec 3D
+			Name "Hardware"
+			Spec Hardware
 			CodeArt 1
 			DevTime 3
 			Submarkets	[ 3; 1; 2 ]
@@ -64,14 +144,14 @@ SoftwareType
 					DevTime 6
 					CodeArt 0.75
 					Level 3
-					Unlock 2025
-					Submarkets [4; 1; 2 ]
+					Unlock 2020
+					Submarkets [8; 2; 4 ]
 					}
 				]
 			}
 			{
 			Name "Controllers"
-			Spec System
+			Spec 3D
 			CodeArt 1
 			DevTime 3
 			Submarkets	[ 3; 1; 2 ]
