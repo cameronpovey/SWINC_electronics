@@ -5,9 +5,59 @@ SoftwareType
 	Description		"Store anything"
 	Random			0.5
 	OneClient		False
-	InHouse			False
+	InHouse			True
 	SubmarketNames	[ Speed; Capacity; Sustainability ]  
 	OptimalDevTime 	38
+	Hardware True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name	"RAID Capable"
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				2
+						DependsOn			"RAID Capable"
+						}
+						{
+						Name	"Capacity Boost"
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						DependsOn			"Capacity Boost"
+						}
+						{
+						Name	"Speed Boost"
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				4
+						DependsOn			"Speed Boost"
+						}
+						
+						{
+						Name 				Casing
+						BuiltInThumbnail	N/A
+						Price				5
+						Time				2
+						}
+						{
+						Name 				Storage Space
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				4
+						}
+					]
+					
+				Processes
+					[
+						{
+						Inputs	[ "RAID Capable"; "Capacity Boost"; "Casing"; "Storage Space" ]
+						Output	Final
+						}
+					]
+				FinalTime 4
+				}
 	Categories
 		[
 			{
