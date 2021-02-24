@@ -7,8 +7,118 @@ SoftwareType
 	OneClient		False
 	InHouse			False
 	SubmarketNames	[ Functionality; Speed; Design ]
-	
 	OptimalDevTime 	36
+	Hardware True
+	Manufacturing
+				{
+				Components
+					[
+						{
+						Name	"Mini"
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				2
+						DependsOn			"Mini"
+						}
+						{
+						Name	"Disc Compatible"
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				2
+						DependsOn			"Disc Compatible"
+						}
+						{
+						Name	"VR Capable"
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				2
+						DependsOn			"VR Capable"
+						}
+						{
+						Name	"Silent"
+						BuiltInThumbnail	N/A
+						Price				10
+						Time				2
+						DependsOn			"Silent"
+						}
+						
+						{
+						Name	"Wireless"
+						BuiltInThumbnail	N/A
+						Price				20
+						Time				2
+						DependsOn			"Wireless"
+						}
+						{
+						Name	"Customizable"
+						BuiltInThumbnail	N/A
+						Price				15
+						Time				2
+						DependsOn			"Customizable"
+						}
+						
+						{
+						Name 				Processer
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				2
+						}
+						{
+						Name 				Graphics
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				2
+						}
+						{
+						Name 				Case
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				2
+						}
+						{
+						Name 				Storage
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				2
+						}
+						{
+						Name 				Power
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				2
+						}
+						
+						{
+						Name 				System
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				2
+						}
+						{
+						Name 				Controllers
+						BuiltInThumbnail	N/A
+						Price				25
+						Time				2
+						}
+					]
+					
+				Processes
+					[
+						{
+						Inputs	[ "Mini"; "Processer"; "Graphics"; "Case"; "Storage"; "Power"; "Disc Compatible"; "VR Capable"; "Silent" ]
+						Output	System
+						}
+						{
+						Inputs	[ "Wireless"; "Customizable" ]
+						Output	Controllers
+						}
+						{
+						Inputs	[ "System"; "Controllers" ]
+						Output	Final
+						}
+					]
+				FinalTime 4
+				}
 	Categories
 		[
 			{
